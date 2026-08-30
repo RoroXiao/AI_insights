@@ -556,6 +556,12 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
 #nav .dot:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .lang-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
+/* === 封面 agenda 06 卡：六卡改两行三列，第 06 附录卡视觉降权 === */
+#agenda-grid{grid-template-columns:repeat(3,1fr) !important;gap:1.6vh 1.4vw}
+#agenda-grid .stat{padding-top:.6vh}
+#agenda-grid .stat .lab{opacity:.5}
+@media (max-width:768px){#agenda-grid{grid-template-columns:1fr !important}}
+
 /* === F7 · 移动端可读性（≤768px）：改为页内纵向滚动，网格降为单列 === */
 @media (max-width:768px){
   html,body{overflow:auto;height:auto}
@@ -671,6 +677,70 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
   #slide-4 .punch{padding:1.1vh 1.4vw !important;font-size:clamp(11px,min(.9vw,1.8vh),15px) !important}
 }
 </style>
+<style id="v2-slide15">
+/* === slide-15 · AI × Finance 实践：量价 Multi-Agent（.qf- 前缀，仅本页作用域）=== */
+#slide-15 .qf-pipe{display:grid;grid-template-columns:21fr 2.2fr 30fr 2.2fr 24fr 2.2fr 21fr;
+  gap:.5vh .25vw;align-items:stretch;margin-top:.9vh}
+#slide-15 .qf-varrow{display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif-en);color:var(--accent);font-size:clamp(15px,1.25vw,24px);opacity:.8}
+#slide-15 .qf-node{border:1px solid var(--hair);border-radius:5px;background:#fff;
+  padding:.85vh .8vw;display:flex;flex-direction:column;gap:.32vh;min-width:0;min-height:0}
+#slide-15 .qf-tag{font-family:var(--mono);font-size:clamp(8.5px,.55vw,10.5px);letter-spacing:.14em;
+  opacity:.62;text-transform:uppercase}
+#slide-15 .qf-name{font-family:var(--serif-zh);font-weight:700;font-size:clamp(12px,.9vw,17.5px);
+  line-height:1.28;color:var(--ink)}
+#slide-15 .qf-desc{font-family:var(--sans-zh);font-size:clamp(9.5px,.62vw,12px);line-height:1.5;
+  opacity:.62;overflow-wrap:break-word}
+#slide-15 .qf-mid{display:flex;flex-direction:column;gap:.55vh;min-width:0}
+#slide-15 .qf-midlab{display:flex;align-items:center;gap:.5vw;font-family:var(--mono);
+  font-size:clamp(8.5px,.55vw,10px);letter-spacing:.18em;text-transform:uppercase;opacity:.5}
+#slide-15 .qf-midlab::before,#slide-15 .qf-midlab::after{content:"";height:1px;flex:1;background:var(--hair)}
+#slide-15 .qf-a{border-color:rgba(79,111,255,.45);border-left:3px solid var(--accent);background:var(--accent-glow)}
+#slide-15 .qf-b{border-color:rgba(139,92,246,.4);border-left:3px solid var(--purple);background:rgba(139,92,246,.05)}
+#slide-15 .qf-c{border-color:var(--ink-tint);border-left:3px solid var(--ink-tint);background:rgba(10,31,61,.04)}
+#slide-15 .qf-out{border-color:rgba(0,212,170,.5);border-left:3px solid var(--green);background:rgba(0,212,170,.05)}
+#slide-15 .qf-out .qf-score{font-family:var(--mono);font-size:clamp(10px,.68vw,13px);color:var(--ink);
+  opacity:.85;font-variant-numeric:tabular-nums}
+/* —— 下半区：四条可迁移启示（2×2 卡，填满下半页）—— */
+#slide-15 .qf-sec{font-family:var(--mono);font-size:clamp(9px,.6vw,11px);letter-spacing:.18em;
+  text-transform:uppercase;opacity:.55;display:flex;align-items:center;gap:.5vw;margin-top:.9vh}
+#slide-15 .qf-sec::after{content:"";height:1px;flex:1;background:var(--hair)}
+#slide-15 .qf-lessons{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
+  gap:.9vh 1vw;flex:1;min-height:0;margin-top:.5vh}
+#slide-15 .qf-lesson{border:1px solid var(--hair);border-left:3px solid var(--accent);border-radius:5px;
+  background:#fff;padding:1.2vh 1.1vw;display:flex;flex-direction:column;gap:.55vh;min-width:0;min-height:0}
+#slide-15 .qf-lesson.l2{border-left-color:var(--purple)}
+#slide-15 .qf-lesson.l3{border-left-color:var(--ink-tint)}
+#slide-15 .qf-lesson.l4{border-left-color:var(--green)}
+#slide-15 .qf-lhead{display:flex;align-items:center;gap:.55vw;min-width:0}
+#slide-15 .qf-lno{font-family:var(--mono);font-weight:800;font-size:clamp(10px,.7vw,13px);
+  color:var(--accent);flex:none}
+#slide-15 .qf-lesson.l2 .qf-lno{color:var(--purple)}
+#slide-15 .qf-lesson.l3 .qf-lno{color:var(--ink-tint)}
+#slide-15 .qf-lesson.l4 .qf-lno{color:var(--green)}
+#slide-15 .qf-ltitle{font-family:var(--serif-zh);font-weight:700;font-size:clamp(13px,.95vw,18px);
+  line-height:1.25;color:var(--ink)}
+#slide-15 .qf-ltag{margin-left:auto;font-family:var(--mono);font-size:clamp(8.5px,.55vw,10.5px);
+  letter-spacing:.12em;text-transform:uppercase;opacity:.48;white-space:nowrap;flex:none}
+#slide-15 .qf-ldesc{font-family:var(--sans-zh);font-size:clamp(11px,.76vw,15px);line-height:1.65;opacity:.78}
+body[data-lang="en"] #slide-15 .qf-ldesc{line-height:1.55}
+#slide-15 .punch{margin-top:.9vh;padding:.75vh 1.2vw;font-size:clamp(12.5px,.95vw,17px)}
+#slide-15 .qf-src{margin-top:.5vh}
+/* —— 矮视口守卫 —— */
+@media (min-width:769px) and (max-height:949px){
+  #slide-15 .qf-pipe{margin-top:.5vh}
+  #slide-15 .qf-node{padding:.6vh .7vw;gap:.2vh}
+  #slide-15 .qf-lessons{gap:.6vh .9vw;margin-top:.3vh}
+  #slide-15 .qf-lesson{padding:.8vh .9vw;gap:.35vh}
+  #slide-15 .qf-ldesc{font-size:clamp(10.5px,.72vw,13.5px);line-height:1.5}
+  #slide-15 .punch{padding:.55vh 1vw !important;font-size:clamp(11px,min(.88vw,1.8vh),14px) !important}
+}
+@media (max-width:768px){
+  #slide-15 .qf-pipe{grid-template-columns:1fr;gap:.8vh}
+  #slide-15 .qf-varrow{transform:rotate(90deg);padding:.2vh 0}
+  #slide-15 .qf-lessons{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body data-lang="cn">
 
@@ -733,12 +803,13 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
       <span class="c">主讲人：肖睿璇 Rosheen</span><span class="e">Speaker: Xiao Ruixuan (Rosheen)</span>
 
     </div>
-    <div class="grid-5" data-anim style="margin-top:3vh;max-width:84vw">
-      <div class="stat"><div class="lab">01</div><div class="nb">Agent</div><div class="nt"><span class="c">概念 · 架构 · 关键组件</span><span class="e">Concept · architecture · key components</span></div></div>
-      <div class="stat"><div class="lab">02</div><div class="nb">3Cs<span class="u">'s</span></div><div class="nt"><span class="c">AI 进入工作的三种形态</span><span class="e">Three entry points into your work</span></div></div>
-      <div class="stat"><div class="lab">03</div><div class="nb">Token</div><div class="nt"><span class="c">燃料，也是账单</span><span class="e">The fuel and the bill</span></div></div>
-      <div class="stat"><div class="lab">04</div><div class="nb">LLM</div><div class="nt"><span class="c">中外通用基础大模型概览</span><span class="e">Overview of general-purpose foundation models (CN &amp; global)</span></div></div>
-      <div class="stat"><div class="lab">05</div><div class="nb"><span class="c">附录</span><span class="e">Ref.</span></div><div class="nt"><span class="c">机制与演进 · 案例与方法论</span><span class="e">Mechanisms, cases &amp; methodology</span></div></div>
+    <div class="grid-5" data-anim style="margin-top:3vh;max-width:84vw" id="agenda-grid">
+      <div class="stat"><div class="lab">01</div><div class="nb">Agent</div><div class="nt"><span class="c">范式跃迁 · 概念与架构</span><span class="e">The paradigm shift: concept &amp; architecture</span></div></div>
+      <div class="stat"><div class="lab">02</div><div class="nb"><span class="c">个人</span><span class="e">You</span></div><div class="nt"><span class="c">AI 素养：与 AI 协作的语法</span><span class="e">AI fluency: how to work with AI</span></div></div>
+      <div class="stat"><div class="lab">03</div><div class="nb"><span class="c">组织</span><span class="e">Org.</span></div><div class="nt"><span class="c">能力与转型 · 含实践案例</span><span class="e">Capabilities &amp; transformation, with cases</span></div></div>
+      <div class="stat"><div class="lab">04</div><div class="nb">Token</div><div class="nt"><span class="c">燃料即账单</span><span class="e">The fuel is the bill</span></div></div>
+      <div class="stat"><div class="lab">05</div><div class="nb">LLM</div><div class="nt"><span class="c">智谱 GLM · 中国答案</span><span class="e">Zhipu GLM, China's answer</span></div></div>
+      <div class="stat"><div class="lab">06</div><div class="nb"><span class="c">附录</span><span class="e">Ref.</span></div><div class="nt"><span class="c">LLM 机制 · 系统工程演进</span><span class="e">LLM mechanism · engineering evolution</span></div></div>
     </div>
   </div>
   <div class="foot">
@@ -746,11 +817,11 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
   </div>
 </section>
 
-<!-- ══════════════════════ 02 · redefine-ai · light ══════════════════════ -->
+<!-- ══════════════════════ redefine-ai ══════════════════════ -->
 <section class="slide light" id="slide-2" data-index="2" data-sid="redefine-ai">
   <div class="chrome">
     <div><span class="c">重新定义 AI · Redefining AI</span><span class="e">Redefining AI</span></div>
-    <div>PART ONE · 01 / 06</div>
+    <div>ACT I · AGENT · 02 / 14</div>
   </div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">破题</span><span class="e">The Opening</span></div>
@@ -783,16 +854,16 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
     </div>
   </div>
   <div class="foot">
-    <div><span class="c">第 01 / 06 页 · 重新定义 AI</span><span class="e">01 / 06 · Redefining AI</span></div>
+    <div><span class="c">第一幕 · Agent：范式跃迁</span><span class="e">ACT I</span></div>
     <div>— · —</div>
   </div>
 </section>
 
-<!-- ══════════════════════ 03 · agent-anatomy · light ══════════════════════ -->
+<!-- ══════════════════════ agent-anatomy ══════════════════════ -->
 <section class="slide light" id="slide-3" data-index="3" data-sid="agent-anatomy">
   <div class="chrome">
     <div><span class="c">Agent 的结构 · Anatomy</span><span class="e">Anatomy of an Agent</span></div>
-    <div>PART ONE · 02 / 06</div>
+    <div>ACT I · AGENT · 03 / 14</div>
   </div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">系统架构与核心组件</span><span class="e">Architecture &amp; Core Components</span></div>
@@ -897,16 +968,139 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
     </div>
   </div>
   <div class="foot">
-    <div><span class="c">第 02 / 06 页 · Agent概念</span><span class="e">02 / 06 · Agent concepts</span></div>
+    <div><span class="c">第一幕 · Agent：系统结构</span><span class="e">ACT I</span></div>
     <div>— · —</div>
   </div>
 </section>
 
-<!-- ══════════════════════ 04 · work-form · light ══════════════════════ -->
+<!-- ══════════════════════ ai-fluency ══════════════════════ -->
+<section class="slide light" id="slide-13" data-index="11" data-sid="ai-fluency">
+  <div class="chrome"><div><span class="c">AI 素养框架 · AI Fluency</span><span class="e">AI Fluency Framework</span></div><div>ACT II · INDIVIDUAL · 04 / 14</div></div>
+  <div class="frame">
+    <div class="kicker" data-anim><span class="c">行业通用「AI 素养」能力基准</span><span class="e">An industry-general AI-fluency capability baseline</span></div>
+    <h2 class="h-xl" data-anim style="margin-bottom:.4vh"><span class="c">AI Fluency：三大交互模式 × 四大核心能力</span><span class="e">AI Fluency: Three Modes of Interaction × The 4 Ds</span></h2>
+    <p class="h-sub" data-anim style="margin-top:.2vh;margin-bottom:.6vh;font-size:clamp(13px,1.05vw,20px)"><span class="c">在「人—AI」协作中，把事做对、做快、做合规、做安全的能力</span><span class="e">The ability to work with AI effectively, efficiently, ethically, and safely</span></p>
+
+    <!-- ─── 三大交互模式 ─── -->
+    <div class="meta" data-anim style="margin-bottom:.5vh"><span class="c">三大交互模式 · 人机介入深度递进</span><span class="e">Three Modes of Interaction · depth of involvement increases</span></div>
+    <div class="grid-3" data-anim style="flex:1;min-height:0;gap:.7vh 1vw;align-items:stretch">
+      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.7vh .8vw">
+        <div style="display:flex;align-items:center;gap:.5vw">
+          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--accent)"><use href="#i-gear"/></svg>
+          <div class="h-sm"><span class="c">自动化 Automation</span><span class="e">Automation</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">MODE 1</span>
+        </div>
+        <div class="note mt1"><span class="c">AI 按指令独立完成<span class="hi">特定任务</span></span><span class="e">AI completes specific tasks on command</span></div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>你的角色</strong> · 下指令者</span><span class="e"><strong>Role</strong> · you direct</span></li>
+          <li><span class="c">邮件 · 摘要 · 社媒文案 · 基础编程</span><span class="e">Emails · summaries · social posts · basic coding</span></li>
+          <li><span class="c">编程对应：跑单条命令 / 生成函数</span><span class="e">Coding: single commands / function generation</span></li>
+        </ul>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.7vh .8vw">
+        <div style="display:flex;align-items:center;gap:.5vw">
+          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--orange)"><use href="#i-nodes"/></svg>
+          <div class="h-sm"><span class="c">增强 Augmentation</span><span class="e">Augmentation</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">MODE 2</span>
+        </div>
+        <div class="note mt1"><span class="c">人与 AI 结成<span class="hi">思考伙伴</span>，迭代共创</span><span class="e">Human + AI as thinking partners, iterating together</span></div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>你的角色</strong> · 共创搭档</span><span class="e"><strong>Role</strong> · co-creator</span></li>
+          <li><span class="c">写故事 · 论文 · 复杂编程</span><span class="e">Stories · papers · complex coding</span></li>
+          <li><span class="c">编程对应：结对编程、跨文件修改</span><span class="e">Coding: pair programming, cross-file edits</span></li>
+        </ul>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.7vh .8vw">
+        <div style="display:flex;align-items:center;gap:.5vw">
+          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--purple)"><use href="#i-claw"/></svg>
+          <div class="h-sm"><span class="c">代理 Agency</span><span class="e">Agency</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">MODE 3</span>
+        </div>
+        <div class="note mt1"><span class="c">配置 AI <span class="hi">自主跑完</span>未来任务（替你 / 替他人）</span><span class="e">Configure AI to run future tasks autonomously</span></div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>你的角色</strong> · 规则制定者</span><span class="e"><strong>Role</strong> · rule-setter</span></li>
+          <li><span class="c">聊天机器人 · 导师 · 游戏角色 · 自主 Agent</span><span class="e">Chatbots · tutors · game characters · agents</span></li>
+          <li><span class="c">编程对应：接进工作流自主交付</span><span class="e">Coding: autonomous delivery in workflows</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="note" data-anim style="margin-top:.5vh;text-align:center"><span class="c">上岗干活 → 并肩作战 → 授权自治 —— 正对应本篇主线：从「会聊」到「会干」</span><span class="e">Execute → co-create → delegate autonomy — the very arc of this deck: from chatting to doing</span></div>
+
+    <!-- ─── 四大核心能力 4 Ds ─── -->
+    <div class="meta" data-anim style="margin-top:1vh;margin-bottom:.5vh"><span class="c">四大核心能力 · The 4 Ds</span><span class="e">The 4 Ds · four core competencies</span></div>
+    <div class="grid-4" data-anim style="flex:1;min-height:0;gap:.7vh .7vw;align-items:stretch">
+      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.7vh .7vw">
+        <div style="display:flex;align-items:center;gap:.4vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--accent)"><use href="#i-fork"/></svg>
+          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Delegation · 委派</span><span class="e">Delegation</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D1</span>
+        </div>
+        <div class="note mt1"><span class="c"><span class="hi">会分活</span> —— 哪些事你做、哪些 AI 做、哪些一起做</span><span class="e"><span class="hi">Divide work</span> — what's yours, the AI's, or shared</span></div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>问题意识</strong> · 先厘清目标与任务性质</span><span class="e"><strong>Problem awareness</strong> · clarify goals first</span></li>
+          <li><span class="c"><strong>平台意识</strong> · 懂各 AI 系统的能力与边界</span><span class="e"><strong>Platform awareness</strong> · know each AI's limits</span></li>
+          <li><span class="c"><strong>任务委派</strong> · 发挥人 / AI 各自优势</span><span class="e"><strong>Task delegation</strong> · play to strengths</span></li>
+        </ul>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.7vh .7vw">
+        <div style="display:flex;align-items:center;gap:.4vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--orange)"><use href="#i-bubble"/></svg>
+          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Description · 描述</span><span class="e">Description</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D2</span>
+        </div>
+        <div class="note mt1"><span class="c"><span class="hi">会提需求</span> —— 用能让 AI 高效协作的方式沟通</span><span class="e"><span class="hi">Communicate</span> — set AI up for productive collaboration</span></div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>产品描述</strong> · 要什么：输出·格式·受众·风格</span><span class="e"><strong>Product</strong> · what: output, format, audience</span></li>
+          <li><span class="c"><strong>过程描述</strong> · 怎么干：分步指令·引导式</span><span class="e"><strong>Process</strong> · how: steps, guided instruction</span></li>
+          <li><span class="c"><strong>行为规范</strong> · 简洁/详尽 · 挑战/支持</span><span class="e"><strong>Performance</strong> · concise or thorough, challenge or support</span></li>
+        </ul>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.7vh .7vw">
+        <div style="display:flex;align-items:center;gap:.4vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--purple)"><use href="#i-brain"/></svg>
+          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Discernment · 甄别</span><span class="e">Discernment</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D3</span>
+        </div>
+        <div class="note mt1"><span class="c"><span class="hi">会挑错</span> —— 批判评估 AI 产出与行为</span><span class="e"><span class="hi">Judge critically</span> — assess AI outputs &amp; behavior</span></div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>产品甄别</strong> · 产出质量·相关性·偏差</span><span class="e"><strong>Product</strong> · quality, relevance, bias</span></li>
+          <li><span class="c"><strong>过程甄别</strong> · 人—AI 协作是否有效</span><span class="e"><strong>Process</strong> · is the collaboration working</span></li>
+          <li><span class="c"><strong>表现甄别</strong> · 自主行为体验如何</span><span class="e"><strong>Performance</strong> · how autonomous behavior feels</span></li>
+        </ul>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--green);padding:.7vh .7vw">
+        <div style="display:flex;align-items:center;gap:.4vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--green)"><use href="#i-shield"/></svg>
+          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Diligence · 尽责</span><span class="e">Diligence</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D4</span>
+        </div>
+        <div class="note mt1"><span class="c"><span class="hi">守底线</span> —— 对 AI 辅助成果负全责</span><span class="e"><span class="hi">Own it</span> — take full responsibility for AI-assisted work</span></div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>创作尽责</strong> · 合规使用</span><span class="e"><strong>Creation</strong> · ethical, compliant use</span></li>
+          <li><span class="c"><strong>透明尽责</strong> · 披露 AI 参与</span><span class="e"><strong>Transparency</strong> · disclose AI involvement</span></li>
+          <li><span class="c"><strong>部署尽责</strong> · 事实核查·测试·担责</span><span class="e"><strong>Deployment</strong> · fact-check, test, be accountable</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="punch" data-anim style="margin-top:1vh;padding:.8vh 1.2vw;font-size:clamp(13px,1vw,18px)">
+      <span class="c">模型只是发动机，<span class="hi">人与 AI 协作的方式</span>才是方向盘 —— 会分活 · 会提需求 · 会挑错 · 守底线。</span>
+      <span class="e">The model is the engine; <span class="hi">how humans and AI work together</span> is the steering wheel — delegate well, describe clearly, discern critically, act diligently.</span>
+    </div>
+
+    <div class="note" data-anim style="margin-top:.7vh;opacity:.5">
+      <span class="c">内容来源 Source：AI Fluency Framework（Rick Dakan &amp; Joseph Feller and Anthropic · CC BY-NC-SA 4.0），网址：<a href="https://academy.claude.com/courses" style="color:inherit">https://academy.claude.com/courses</a></span>
+      <span class="e">Source: AI Fluency Framework (Rick Dakan &amp; Joseph Feller and Anthropic · CC BY-NC-SA 4.0) · <a href="https://academy.claude.com/courses" style="color:inherit">https://academy.claude.com/courses</a></span>
+    </div>
+  </div>
+  <div class="foot"><div><span class="c">第二幕 · 个人：AI 素养</span><span class="e">ACT II</span></div><div>— · —</div></div>
+</section>
+
+<!-- ══════════════════════ work-form ══════════════════════ -->
 <section class="slide light" id="slide-4" data-index="4" data-sid="work-form">
   <div class="chrome">
     <div><span class="c">AI 介入工作的形态 · Forms &amp; Assets</span><span class="e">Forms &amp; Assets</span></div>
-    <div>PART ONE · 03 / 06</div>
+    <div>ACT III · ORGANIZATION · 05 / 14</div>
   </div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">能力与资产</span><span class="e">Capability &amp; Assets</span></div>
@@ -1312,15 +1506,253 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
 
   </div>
   <div class="foot">
-    <div><span class="c">第 03 / 06 页 · 3Cs</span><span class="e">03 / 06 · Three C's</span></div>
+    <div><span class="c">第三幕 · 组织：能力与资产</span><span class="e">ACT III</span></div>
     <div>— · —</div>
   </div>
 </section>
 
+<!-- ══════════════════════ rewired ══════════════════════ -->
+<section class="slide light" id="slide-14" data-index="12" data-sid="rewired">
+  <div class="chrome"><div><span class="c">企业转型方法论 · 麦肯锡 Rewired</span><span class="e">Enterprise Playbook · McKinsey Rewired</span></div><div>ACT III · ORGANIZATION · 06 / 14</div></div>
+  <div class="frame">
+    <div class="kicker" data-anim><span class="c">读书参考 × AI 转型适配</span><span class="e">Book Reference, Adapted for the AI Era</span></div>
+    <h2 class="h-xl" data-anim style="margin-bottom:.4vh"><span class="c">数字化转型的六项能力，AI 转型也可参考</span><span class="e">Six Capabilities from Digital Transformation — a Reference for AI Transformation</span></h2>
+    <p class="h-sub" data-anim style="margin-top:.2vh;margin-bottom:.6vh;font-size:clamp(13px,1.05vw,20px)"><span class="c">《Rewired》：89% 的企业已启动数字化转型，却只兑现 31% 的预期收入提升——卡点从来不在技术，而在组织能力。这本手册的骨架，正是 AI 转型的一面镜子。</span><span class="e">Rewired (McKinsey, 2023): 89% of firms have launched transformations, yet captured only 31% of the expected revenue lift — the bottleneck is organizational, not technical. Its skeleton mirrors AI transformation.</span></p>
+
+    <!-- ─── 六项企业能力 ─── -->
+    <div class="meta" data-anim style="margin-bottom:.5vh"><span class="c">六项企业能力 ·《Rewired》六大篇章，项项都是 AI 转型的地基</span><span class="e">Six enterprise capabilities · Rewired's six sections, each a foundation for AI transformation</span></div>
+    <div class="grid-3" data-anim style="gap:.6vh 1vw;align-items:stretch">
+      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.6vh .7vw">
+        <div style="display:flex;align-items:center;gap:.45vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--accent)"><use href="#i-plan"/></svg>
+          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">转型路线图</span><span class="e">Roadmap</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">01</span>
+        </div>
+        <div class="note mt1"><span class="c">先对齐 North Star，再按业务域切块：10–15 个域先选 2–5 个</span><span class="e">Align on a North Star, then carve by domain: pick 2–5 of 10–15</span></div>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.6vh .7vw">
+        <div style="display:flex;align-items:center;gap:.45vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--orange)"><use href="#i-user"/></svg>
+          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">人才梯队</span><span class="e">Talent Bench</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">02</span>
+        </div>
+        <div class="note mt1"><span class="c">核心能力自建、非核心外包；技术人才单独定价晋升</span><span class="e">Build core in-house, outsource the rest; pay tech talent on its own scale</span></div>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.6vh .7vw">
+        <div style="display:flex;align-items:center;gap:.45vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--purple)"><use href="#i-loop"/></svg>
+          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">运营模式</span><span class="e">Operating Model</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">03</span>
+        </div>
+        <div class="note mt1"><span class="c">从 doing agile 到 being agile；产品经理职业化</span><span class="e">From doing agile to being agile; professionalize product management</span></div>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--green);padding:.6vh .7vw">
+        <div style="display:flex;align-items:center;gap:.45vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--green)"><use href="#i-chip"/></svg>
+          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">技术架构</span><span class="e">Technology</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">04</span>
+        </div>
+        <div class="note mt1"><span class="c">解耦架构 + 云 + DevOps，撑起分布式创新的速度</span><span class="e">Decoupled architecture, cloud, DevOps — speed for distributed innovation</span></div>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.6vh .7vw">
+        <div style="display:flex;align-items:center;gap:.45vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--accent)"><use href="#i-db"/></svg>
+          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">数据无处不在</span><span class="e">Data Everywhere</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">05</span>
+        </div>
+        <div class="note mt1"><span class="c">数据产品化：像管产品一样管数据，可复用、有人负责</span><span class="e">Data products: manage data like products — reusable, owned, accountable</span></div>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.6vh .7vw">
+        <div style="display:flex;align-items:center;gap:.45vw">
+          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--orange)"><use href="#i-door"/></svg>
+          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">采纳与规模化</span><span class="e">Adoption &amp; Scaling</span></div>
+          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">06</span>
+        </div>
+        <div class="note mt1"><span class="c">方案上线 ≠ 价值兑现；转型办公室用 stage-gate 追到底</span><span class="e">Launch ≠ value; a transformation office tracks impact to the P&amp;L</span></div>
+      </div>
+    </div>
+    <div class="note" data-anim style="margin-top:.3vh;text-align:center"><span class="c">第 <span class="hi">05 · 06</span> 两项——数据与采纳——正是 AI 转型「试点易、规模化难」的两大死因</span><span class="e">Capabilities <span class="hi">05 &amp; 06</span> — data and adoption — are exactly where AI transformations stall between pilot and scale</span></div>
+
+    <!-- ─── 复用 / 升级 ─── -->
+    <div class="meta" data-anim style="margin-top:.7vh;margin-bottom:.5vh"><span class="c">哪些直接复用 · 哪些要换新变量</span><span class="e">What transfers as-is · what needs upgrading</span></div>
+    <div class="grid-6-6" data-anim style="flex:1;min-height:0;gap:.6vh 1.4vw;align-items:stretch">
+      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.7vh .8vw">
+        <div style="display:flex;align-items:center;gap:.5vw">
+          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--accent)"><use href="#i-shield"/></svg>
+          <div class="h-sm"><span class="c">直接复用 · 组织的物理定律不变</span><span class="e">Transfer as-is · the physics holds</span></div>
+        </div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>按业务域切块</strong> · 够大才值得打、够小才打得赢，别全公司一起上</span><span class="e"><strong>Domain bites</strong> · big enough to matter, small enough to win</span></li>
+          <li><span class="c"><strong>Pod 小队制</strong> · 一个方案一个小队：业务 + 产品 + 工程 + 数据端到端负责</span><span class="e"><strong>Pod model</strong> · one squad per solution, end-to-end ownership</span></li>
+          <li><span class="c"><strong>数据产品化</strong> · 语料 / 知识库的地基，AI 转型只会更依赖它</span><span class="e"><strong>Data products</strong> · the foundation AI now leans on even harder</span></li>
+          <li><span class="c"><strong>采纳纪律</strong> · 上线只算 30%，价值要追进损益表</span><span class="e"><strong>Adoption discipline</strong> · launch is 30%; track value to the P&amp;L</span></li>
+        </ul>
+      </div>
+      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.7vh .8vw">
+        <div style="display:flex;align-items:center;gap:.5vw">
+          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--orange)"><use href="#i-gear"/></svg>
+          <div class="h-sm"><span class="c">AI 时代升级 · 换上新变量</span><span class="e">Upgrade for AI · new variables</span></div>
+        </div>
+        <ul class="ar-list mt1">
+          <li><span class="c"><strong>技术栈长出新层</strong> · 模型网关 · 评测 Evals · Agent 编排 · LLMOps</span><span class="e"><strong>New stack layer</strong> · model gateway, evals, agent orchestration, LLMOps</span></li>
+          <li><span class="c"><strong>人才换新角色</strong> · AI 产品经理 / Agent 工程师 / 评测工程师 + 全员 AI 素养（见前页）</span><span class="e"><strong>New roles</strong> · AI PMs, agent engineers, eval engineers + AI fluency for all</span></li>
+          <li><span class="c"><strong>数据直通模型</strong> · RAG 语料、微调数据、知识库——数据质量就是模型上限</span><span class="e"><strong>Data feeds the model</strong> · corpus, fine-tuning sets, KB — data quality caps model quality</span></li>
+          <li><span class="c"><strong>风险清单变长</strong> · 幻觉 · 模型风险 · 隐私合规，须前置到设计阶段</span><span class="e"><strong>Longer risk list</strong> · hallucination, model risk, privacy — shift left</span></li>
+          <li><span class="c"><strong>节奏两极分化</strong> · 试点从月级压到周级，但「人改变工作方式」仍以月计</span><span class="e"><strong>Split tempo</strong> · pilots compress to weeks; human adoption still takes months</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="punch" data-anim style="margin-top:.8vh;padding:.7vh 1.2vw;font-size:clamp(13px,1vw,18px)">
+      <span class="c">企业缺的从来不是模型，而是<span class="hi">把模型变成业务价值的组织能力</span>——六项能力，一项都不能少。</span>
+      <span class="e">What enterprises lack is never the model — it's the <span class="hi">organizational machinery that turns models into value</span>. All six capabilities, no exemptions.</span>
+    </div>
+
+    <div class="note" data-anim style="margin-top:.6vh;opacity:.5">
+      <span class="c">内容来源 Source：Rewired: The McKinsey Guide to Outcompeting in the Age of Digital and AI（Eric Lamarre · Kate Smaje · Rodney Zemmel, McKinsey Press, 2023），89% / 31% 数据引自该书引言</span>
+      <span class="e">Source: Rewired (Lamarre, Smaje &amp; Zemmel, McKinsey Press, 2023), figures from its Introduction</span>
+    </div>
+  </div>
+  <div class="foot"><div><span class="c">第三幕 · 组织：转型方法论</span><span class="e">ACT III</span></div><div>— · —</div></div>
+</section>
+
+<!-- ══════════════════════ im-agent-cases ══════════════════════ -->
+<section class="slide light" id="slide-12" data-index="11" data-sid="im-agent-cases">
+  <div class="chrome"><div><span class="c">参考 · IM × Agent 案例研究</span><span class="e">Reference · IM × Agent Cases</span></div><div>ACT III · ORGANIZATION · 07 / 14</div></div>
+  <div class="frame">
+
+    <div class="kicker" data-anim><span class="c">四类 Agent 助手对照</span><span class="e">Four Agent Assistants Compared</span></div>
+    <h2 class="h-xl" data-anim style="margin-bottom:.8vh"><span class="c">IM × AGENT 案例研究</span><span class="e">IM × Agent Case Studies</span></h2>
+    <div class="grid-4" data-anim style="gap:.9vh 1vw;align-items:stretch">
+      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">A</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh">OpenClaw</div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">个人 AI 助手 · 龙虾</span><span class="e">Personal AI · Lobster</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c">Gateway hub-and-spoke 架构</span><span class="e">Hub-and-spoke Gateway</span></li><li><span class="c">桥接 WhatsApp/Telegram/Slack 等多渠道</span><span class="e">Bridges multi-channel IM</span></li><li><span class="c">消息统一分发 · 工具集成</span><span class="e">Unified routing + tools</span></li></ul></div>
+      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">B</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh"><span class="c">Hermes</span><span class="e">Hermes</span></div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">多通道 + 原生飞书</span><span class="e">Multi-channel + Feishu</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c"><strong>80+ Skills</strong>·跨会话持久记忆</span><span class="e"><strong>80+ Skills</strong>, memory</span></li><li><span class="c">飞书/微信/Telegram/Discord</span><span class="e">Multi-IM integration</span></li><li><span class="c">OpenClaw 适配版</span><span class="e">OpenClaw variant</span></li></ul></div>
+      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">C</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh">Claude Code</div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">CLI 原生 · 不绑 IM</span><span class="e">CLI-native · No IM</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c">REPL + Agent Loop + swarm 编排</span><span class="e">REPL + Loop + swarm</span></li><li><span class="c">MCP/SDK 嵌入 IDE</span><span class="e">Embeds via MCP/SDK</span></li><li><span class="c">Tools/MCP 生态心脏</span><span class="e">Heart of MCP ecosystem</span></li></ul></div>
+      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">D</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh"><span class="c">Zcode · 智谱开源</span><span class="e">Zcode · GLM OSS</span></div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">中间路线</span><span class="e">Middle Path</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c">通用 Agent 框架（桌面）</span><span class="e">Universal framework</span></li><li><span class="c"><strong>Lark-cli</strong> 桥接飞书</span><span class="e">Bridges Feishu via <strong>Lark-cli</strong></span></li><li><span class="c">底层都是 Augmented LLM</span><span class="e">Built on Augmented LLM</span></li></ul></div>
+    </div>
+    <div class="kicker" data-anim style="margin-top:1.6vh;margin-bottom:.2vh"><span class="c">案例 · 生产级飞书 Agent 架构（Albert）</span><span class="e">Case · Production Feishu Agent (Albert)</span></div>
+    <div class="arch-flow" data-anim style="margin-top:0;gap:.3vh;flex:1;min-height:0;justify-content:center">
+      <div class="arch-row arch-entry" style="gap:1vw">
+        <div class="arch-box arch-im" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#128172;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)"><span class="c">飞书 IM</span><span class="e">Feishu IM</span></div><div class="arch-desc"><span class="c">Bot · 消息触达</span><span class="e">Bot · Trigger</span></div></div>
+        <div class="arch-plus">+</div>
+        <div class="arch-box arch-web" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#127760;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)">Web Portal</div><div class="arch-desc"><span class="c">SSO 登录</span><span class="e">SSO Login</span></div></div>
+      </div>
+      <div class="arch-arrow-down"><span class="c">↓ 消息事件</span><span class="e">↓ Message Event</span></div>
+      <div class="arch-row arch-core">
+        <div class="arch-box arch-node wide" style="padding:.7vh 1.2vw">
+          <div class="arch-badge"><span class="c">Augmented LLM + Tools</span><span class="e">Augmented LLM + Tools</span></div>
+          <div class="arch-title" style="font-size:clamp(12px,.85vw,17px)">node-service</div>
+          <div class="arch-desc"><span class="c">Claude Code SDK + Python</span><span class="e">Claude Code SDK + Python</span></div>
+          <div class="arch-tags"><span class="chip cn" style="font-size:8.5px"><span class="c">飞书 WS 长链接</span><span class="e">Feishu WS</span></span><span class="chip cn" style="font-size:8.5px">lark-cli</span><span class="chip cn" style="font-size:8.5px"><span class="c">customer-report</span><span class="e">Report</span></span></div>
+        </div>
+      </div>
+      <div class="arch-arrow-down"><span class="c">↓ X-Internal-Token</span><span class="e">↓ X-Internal-Token</span></div>
+      <div class="arch-row arch-be">
+        <div class="arch-box arch-backend wide" style="padding:.7vh 1.2vw">
+          <div class="arch-badge go"><span class="c">Go · Bin</span><span class="e">Go · Binary</span></div>
+          <div class="arch-title" style="font-size:clamp(12px,.85vw,17px)">Backend</div>
+          <div class="arch-desc"><span class="c">业务逻辑 + RBAC + Scheduler</span><span class="e">Business Logic + RBAC + Scheduler</span></div>
+          <div class="arch-tags"><span class="chip cn" style="font-size:8.5px">GORM</span><span class="chip cn" style="font-size:8.5px"><span class="c">3pc 扫表</span><span class="e">3pc Scan</span></span><span class="chip cn" style="font-size:8.5px">OAuth→JWT</span></div>
+        </div>
+      </div>
+      <div class="arch-arrow-down"><span class="c">↓ GORM</span><span class="e">↓ GORM</span></div>
+      <div class="arch-row arch-data" style="gap:1vw">
+        <div class="arch-box arch-db" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#128024;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)">PostgreSQL</div><div class="arch-desc"><span class="c">业务数据</span><span class="e">Business Data</span></div></div>
+        <div class="arch-plus">×</div>
+        <div class="arch-box arch-cache" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#9889;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)">Redis</div><div class="arch-desc"><span class="c">缓存 / 会话</span><span class="e">Cache / Session</span></div></div>
+      </div>
+    </div>
+    <div class="punch" data-anim style="margin-top:.6vh;font-size:clamp(12px,.85vw,16px);padding:.7vh 1.2vw">
+      <span class="c">关键差异：<strong>IM 接入两极分化</strong>——OpenClaw/Hermes 内置 Gateway；Claude Code 纯 CLI/IDE；Zcode 走中间路线借 <span class="hi">Lark-cli</span>。</span>
+      <span class="e">Key divergence: built-in gateways vs CLI-only vs the middle path via <span class="hi">Lark-cli</span>.</span>
+    </div>
+  </div>
+  <div class="foot"><div><span class="c">第三幕 · 组织：IM × Agent 案例</span><span class="e">ACT III</span></div><div>— · —</div></div>
+</section>
+
+<!-- ══════════════════════ qf-practice ══════════════════════ -->
+<section class="slide light" id="slide-15" data-index="12" data-sid="qf-practice">
+  <div class="chrome"><div><span class="c">附录 · AI × Finance 实践</span><span class="e">Appendix · AI × Finance Practice</span></div><div>ACT III · ORGANIZATION · 08 / 14</div></div>
+  <div class="frame">
+
+    <div class="kicker" data-anim><span class="c">一个真实样本 · 量价 Multi-Agent 事件驱动引擎</span><span class="e">A Real Sample · Price-Volume Multi-Agent Engine</span></div>
+    <h2 class="h-xl" data-anim style="margin-bottom:.35vh"><span class="c">AI × Finance：当「利好是否已被定价」变成一条证据链</span><span class="e">AI × Finance: Turning "Is Good News Priced In?" into a Chain of Evidence</span></h2>
+    <p class="h-sub" data-anim style="margin-top:.2vh;margin-bottom:.5vh;font-size:clamp(12px,.98vw,19px)"><span class="c">正向事件只是起点：三个各司其职的 Agent，把交易判断拆成<span class="hi">可复核、可回测</span>的分析环节——我观察 Agent 落地金融的一个切片（基于公开研报复现重绘）。</span><span class="e">A positive event is only the starting point: three specialized agents turn the trade call into <span class="hi">reviewable, back-testable</span> steps — one slice of how agents land in finance (rebuilt from published research).</span></p>
+
+    <!-- ─── 三智能体流水线 ─── -->
+    <div class="qf-pipe" data-anim>
+      <div class="qf-node">
+        <div class="qf-tag">01 · INPUT</div>
+        <div class="qf-name"><span class="c">正向事件信号</span><span class="e">Positive Event</span></div>
+        <div class="qf-desc"><span class="c">盈利超预期 / 预测上调 / 深度覆盖；附事件前收益、事件日跳空与量能</span><span class="e">Earnings beat / estimate raise / initiation; plus run-up, gap &amp; volume on event day</span></div>
+      </div>
+      <div class="qf-varrow">→</div>
+      <div class="qf-mid">
+        <div class="qf-node qf-a">
+          <div class="qf-tag">02 · AGENT A</div>
+          <div class="qf-name"><span class="c">量价指标智能体</span><span class="e">Indicator Agent</span></div>
+          <div class="qf-desc"><span class="c">精确数值链：波动率→趋势强弱→方向→位置→量能（ATR/ADX/MACD/RSI/MFI…），输出标准化状态</span><span class="e">Numeric chain: volatility→trend→direction→position→volume (ATR/ADX/MACD/RSI/MFI…)</span></div>
+        </div>
+        <div class="qf-midlab"><span class="c">并行 · 各自独立成报</span><span class="e">Parallel · Independent reports</span></div>
+        <div class="qf-node qf-b">
+          <div class="qf-tag">02 · AGENT B</div>
+          <div class="qf-name"><span class="c">识图智能体</span><span class="e">Chart-Reading Agent</span></div>
+          <div class="qf-desc"><span class="c">K线结构 · 趋势通道 · 量价配合 · MACD 演化；每个视觉结论用结构化数值复核</span><span class="e">Candles · channel · volume-price fit · MACD; every visual claim re-anchored to numbers</span></div>
+        </div>
+      </div>
+      <div class="qf-varrow">→</div>
+      <div class="qf-node qf-c">
+        <div class="qf-tag">03 · AGENT C</div>
+        <div class="qf-name"><span class="c">最终决策智能体</span><span class="e">Decision Agent</span></div>
+        <div class="qf-desc"><span class="c">跨报告综合：同源证据去重 · 冲突时评分向 0 收缩 · 只核对原始依据，不做观点投票</span><span class="e">Cross-report synthesis: de-dup correlated evidence, shrink score on conflict, never a vote</span></div>
+      </div>
+      <div class="qf-varrow">→</div>
+      <div class="qf-node qf-out">
+        <div class="qf-tag">04 · OUTPUT</div>
+        <div class="qf-name"><span class="c">双期限方向评分</span><span class="e">Dual-Horizon Score</span></div>
+        <div class="qf-score">score_5d / score_20d ∈ [-1, 1]</div>
+        <div class="qf-desc"><span class="c">看多 / 中性 / 看空 + 论证 + 风险收益比（仅用分析日及此前可知信息）</span><span class="e">Bull / neutral / bear + rationale + risk-reward (no look-ahead)</span></div>
+      </div>
+    </div>
+
+    <!-- ─── 下半区：四条可迁移启示（2×2 卡）─── -->
+    <div class="qf-sec" data-anim><span class="c">这个案例让我看重的，是四条可迁移的 Agent 工程方法</span><span class="e">What makes this case worth studying: four transferable agent-engineering methods</span></div>
+    <div class="qf-lessons">
+      <div class="qf-lesson" data-anim>
+        <div class="qf-lhead"><span class="qf-lno">01</span><div class="qf-ltitle"><span class="c">分而治之</span><span class="e">Divide</span></div><span class="qf-ltag"><span class="c">拆认知通路</span><span class="e">Split cognition</span></span></div>
+        <div class="qf-ldesc"><span class="c">数值与图形是两条认知通路：指标 Agent 按固定口径归纳波动率、趋势、量能；识图 Agent 把握 K 线结构与通道形态。拆给不同 Agent，降低单模型的注意力分散，每份结论都保留可追溯的原始依据。</span><span class="e">Numbers and charts are two cognitive paths: one agent normalizes metrics, the other reads chart structure. Splitting them cuts attention dilution and keeps every conclusion traceable.</span></div>
+      </div>
+      <div class="qf-lesson l2" data-anim>
+        <div class="qf-lhead"><span class="qf-lno">02</span><div class="qf-ltitle"><span class="c">强制交叉核验</span><span class="e">Cross-check</span></div><span class="qf-ltag"><span class="c">防幻觉工程化</span><span class="e">Engineered anti-hallucination</span></span></div>
+        <div class="qf-ldesc"><span class="c">识图 Agent 的每个视觉结论都必须锚定结构化数值复核，图文冲突时以数值为准并显式标注。防幻觉不靠提示词祈祷，而是做成一条可执行的工程约束——这是最值得抄走的一招。</span><span class="e">Every visual claim must be re-anchored to structured numbers; on conflict, numbers win and it shows. Anti-hallucination as an executable constraint, not a prompt-time prayer.</span></div>
+      </div>
+      <div class="qf-lesson l3" data-anim>
+        <div class="qf-lhead"><span class="qf-lno">03</span><div class="qf-ltitle"><span class="c">期限独立</span><span class="e">Split horizons</span></div><span class="qf-ltag"><span class="c">目标对齐证据</span><span class="e">Align evidence to target</span></span></div>
+        <div class="qf-ldesc"><span class="c">5 日与 20 日拆成两个独立决策头，分别配置证据权重、禁止互相引用——短期看事件反应，中期看趋势路径。混用期限是 Agent 决策最常见的隐性偏差，结构化拆分直接消除了它。</span><span class="e">5-day and 20-day heads reason independently with their own evidence weights. Mixing horizons is the most common hidden bias in agent decisions; structural separation removes it.</span></div>
+      </div>
+      <div class="qf-lesson l4" data-anim>
+        <div class="qf-lhead"><span class="qf-lno">04</span><div class="qf-ltitle"><span class="c">可复盘</span><span class="e">Auditable</span></div><span class="qf-ltag"><span class="c">进入生产的门槛</span><span class="e">The bar for production</span></span></div>
+        <div class="qf-ldesc"><span class="c">从指标读数、图形识别到综合判断，完整判定链条全程保留：可复核、可回测、可迭代。当 Agent 的判断能被拆解、核验与验证，AI 才真正从「讲故事」走向「算得过账」。</span><span class="e">The full chain — readings, chart calls, synthesis — is preserved: reviewable, back-testable, iterable. When judgment can be decomposed and verified, AI graduates from storytelling to accountability.</span></div>
+      </div>
+    </div>
+
+    <div class="punch" data-anim>
+      <span class="c">这套框架真正回答的，是每个投研人都躲不开的问题：利好出来，到底是机会还是兑现——而答案必须来自证据，不是叙事。</span>
+      <span class="e">What the framework really answers is the question every investor faces: when good news lands, is it an opening or an exit? The answer must come from evidence, not narrative.</span>
+    </div>
+
+    <div class="note qf-src" data-anim>
+      <span class="c">案例整理自《大模型系列（8）：量价 Multi-Agent 架构，事件驱动的智能交易引擎》（中金公司研究部，2026-08-24），架构图为本人重绘，仅供交流，不构成投资建议</span>
+      <span class="e">Case adapted from "LLM Series (8): Price-Volume Multi-Agent Architecture" (CICC Research, 2026-08-24); diagram redrawn, for discussion only, not investment advice</span>
+    </div>
+  </div>
+  <div class="foot"><div><span class="c">第三幕 · 组织：AI × Finance 实践</span><span class="e">ACT III</span></div><div>— · —</div></div>
+</section>
+
+<!-- ══════════════════════ token-economy ══════════════════════ -->
 <section class="slide light" id="slide-5" data-index="5" data-sid="token-economy">
   <div class="chrome">
     <div><span class="c">Token 经济 · Token Economy</span><span class="e">Token Economy</span></div>
-    <div>PART ONE · 04 / 06</div>
+    <div>ACT IV · TOKEN ECONOMY · 09 / 14</div>
   </div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">燃料、性价比与双引擎</span><span class="e">Fuel, Cost-performance, Two Engines</span></div>
@@ -1374,18 +1806,16 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
     </div>
   </div>
   <div class="foot">
-    <div><span class="c">第 04 / 06 页 · 燃料 · 公式 · 双引擎</span><span class="e">04 / 06 · Fuel · formula · two engines</span></div>
+    <div><span class="c">第四幕 · Token 经济</span><span class="e">ACT IV</span></div>
     <div>— · —</div>
   </div>
 </section>
 
-<!-- [deleted] slide-5b paradigm-shift -->
-
-<!-- ══════════════════════ 06 · global-china · light ══════════════════════ -->
+<!-- ══════════════════════ global-china ══════════════════════ -->
 <section class="slide light" id="slide-6" data-index="7" data-sid="global-china">
   <div class="chrome">
     <div><span class="c">全球与中国 · Global &amp; China</span><span class="e">Global &amp; China</span></div>
-    <div>PART ONE · 05 / 06</div>
+    <div>ACT V · LANDSCAPE · 10 / 14</div>
   </div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">两条路线与一种换道超车</span><span class="e">Two Routes, One Lane Change</span></div>
@@ -1446,16 +1876,16 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
     </div>
   </div>
   <div class="foot">
-    <div><span class="c">第 05 / 06 页 · 两条路线 · 换道超车</span><span class="e">05 / 06 · Two routes · lane change</span></div>
+    <div><span class="c">第五幕 · 格局：全球与中国</span><span class="e">ACT V</span></div>
     <div>— · —</div>
   </div>
 </section>
 
-<!-- ══════════════════════ 07 · glm · light ══════════════════════ -->
+<!-- ══════════════════════ glm ══════════════════════ -->
 <section class="slide light" id="slide-7" data-index="8" data-sid="glm">
   <div class="chrome">
     <div><span class="c">智谱 GLM 实践 · Zhipu GLM</span><span class="e">Zhipu GLM in Practice</span></div>
-    <div>PART ONE · 06 / 06</div>
+    <div>ACT VI · LLM · 11 / 14</div>
   </div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">中国国产开源 SOTA 模型实践</span><span class="e">China's Open-source SOTA in Practice</span></div>
@@ -1497,14 +1927,14 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
     </div>
   </div>
   <div class="foot">
-    <div><span class="c">第 06 / 06 页 · GLM旗舰模型</span><span class="e">06 / 06 · GLM Flagship Models</span></div>
+    <div><span class="c">第六幕 · LLM：智谱 GLM 实践</span><span class="e">ACT VI</span></div>
     <div>— · —</div>
   </div>
 </section>
 
-<!-- ══════════════════════ 09 · apx-llm-mechanism · light cn-only ══════════════════════ -->
+<!-- ══════════════════════ apx-llm-mechanism ══════════════════════ -->
 <section class="slide light" id="slide-9" data-index="9" data-sid="apx-llm-mechanism">
-  <div class="chrome"><div><span class="c">附件 · LLM 机制</span><span class="e">Appendix · LLM Mechanism</span></div><div>APPENDIX · MECHANISM</div></div>
+  <div class="chrome"><div><span class="c">附件 · LLM 机制</span><span class="e">Appendix · LLM Mechanism</span></div><div>APPENDIX · 12 / 14</div></div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">附录</span><span class="e">Appendix</span></div>
     <h2 class="h-xl" data-anim><span class="c">LLM 机制：训练流程 × 运作流程</span><span class="e">LLM Mechanism: Training × Inference</span></h2>
@@ -1612,12 +2042,12 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
         </div>
     </div>
   </div>
-  <div class="foot"><div><span class="c">附件 · LLM 机制</span><span class="e">Appendix · LLM Mechanism</span></div><div>— · —</div></div>
+  <div class="foot"><div><span class="c">附录 · LLM 机制</span><span class="e">APPENDIX</span></div><div>— · —</div></div>
 </section>
 
-<!-- ══════════════════════ 11 · apx-ai-evolution · light cn-only ══════════════════════ -->
+<!-- ══════════════════════ apx-ai-evolution ══════════════════════ -->
 <section class="slide light" id="slide-11" data-index="11" data-sid="apx-ai-evolution">
-  <div class="chrome"><div><span class="c">附件 · AI 系统工程演进</span><span class="e">Appendix · AI Engineering Evolution</span></div><div>APPENDIX · EVOLUTION</div></div>
+  <div class="chrome"><div><span class="c">附件 · AI 系统工程演进</span><span class="e">Appendix · AI Engineering Evolution</span></div><div>APPENDIX · 13 / 14</div></div>
   <div class="frame">
     <div class="kicker" data-anim><span class="c">附录</span><span class="e">Appendix</span></div>
     <h2 class="h-xl" data-anim><span class="c">AI 系统工程演进</span><span class="e">AI Systems Engineering Evolution</span></h2>
@@ -1703,291 +2133,10 @@ svg .accent-dash{stroke:var(--accent);stroke-width:1.4;fill:none;stroke-dasharra
       <span class="e">Each rung, the human steps one notch outward — from writing <span class="hi">prompts</span>, to assembling <span class="hi">context</span>, to building <span class="hi">harnesses</span>, to designing <span class="hi">loops</span>.</span>
     </div>
   </div>
-  <div class="foot"><div><span class="c">附件 · AI 系统工程演进</span><span class="e">Appendix · AI Engineering Evolution</span></div><div>— · —</div></div>
+  <div class="foot"><div><span class="c">附录 · AI 系统工程演进</span><span class="e">APPENDIX</span></div><div>— · —</div></div>
 </section>
 
-<!-- ══════════════════════ 13 · ai-fluency · light ══════════════════════ -->
-<section class="slide light" id="slide-13" data-index="11" data-sid="ai-fluency">
-  <div class="chrome"><div><span class="c">AI 素养框架 · AI Fluency</span><span class="e">AI Fluency Framework</span></div><div>REFERENCE · AI FLUENCY</div></div>
-  <div class="frame">
-    <div class="kicker" data-anim><span class="c">行业通用「AI 素养」能力基准</span><span class="e">An industry-general AI-fluency capability baseline</span></div>
-    <h2 class="h-xl" data-anim style="margin-bottom:.4vh"><span class="c">AI Fluency：三大交互模式 × 四大核心能力</span><span class="e">AI Fluency: Three Modes of Interaction × The 4 Ds</span></h2>
-    <p class="h-sub" data-anim style="margin-top:.2vh;margin-bottom:.6vh;font-size:clamp(13px,1.05vw,20px)"><span class="c">在「人—AI」协作中，把事做对、做快、做合规、做安全的能力</span><span class="e">The ability to work with AI effectively, efficiently, ethically, and safely</span></p>
-
-    <!-- ─── 三大交互模式 ─── -->
-    <div class="meta" data-anim style="margin-bottom:.5vh"><span class="c">三大交互模式 · 人机介入深度递进</span><span class="e">Three Modes of Interaction · depth of involvement increases</span></div>
-    <div class="grid-3" data-anim style="flex:1;min-height:0;gap:.7vh 1vw;align-items:stretch">
-      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.7vh .8vw">
-        <div style="display:flex;align-items:center;gap:.5vw">
-          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--accent)"><use href="#i-gear"/></svg>
-          <div class="h-sm"><span class="c">自动化 Automation</span><span class="e">Automation</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">MODE 1</span>
-        </div>
-        <div class="note mt1"><span class="c">AI 按指令独立完成<span class="hi">特定任务</span></span><span class="e">AI completes specific tasks on command</span></div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>你的角色</strong> · 下指令者</span><span class="e"><strong>Role</strong> · you direct</span></li>
-          <li><span class="c">邮件 · 摘要 · 社媒文案 · 基础编程</span><span class="e">Emails · summaries · social posts · basic coding</span></li>
-          <li><span class="c">编程对应：跑单条命令 / 生成函数</span><span class="e">Coding: single commands / function generation</span></li>
-        </ul>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.7vh .8vw">
-        <div style="display:flex;align-items:center;gap:.5vw">
-          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--orange)"><use href="#i-nodes"/></svg>
-          <div class="h-sm"><span class="c">增强 Augmentation</span><span class="e">Augmentation</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">MODE 2</span>
-        </div>
-        <div class="note mt1"><span class="c">人与 AI 结成<span class="hi">思考伙伴</span>，迭代共创</span><span class="e">Human + AI as thinking partners, iterating together</span></div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>你的角色</strong> · 共创搭档</span><span class="e"><strong>Role</strong> · co-creator</span></li>
-          <li><span class="c">写故事 · 论文 · 复杂编程</span><span class="e">Stories · papers · complex coding</span></li>
-          <li><span class="c">编程对应：结对编程、跨文件修改</span><span class="e">Coding: pair programming, cross-file edits</span></li>
-        </ul>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.7vh .8vw">
-        <div style="display:flex;align-items:center;gap:.5vw">
-          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--purple)"><use href="#i-claw"/></svg>
-          <div class="h-sm"><span class="c">代理 Agency</span><span class="e">Agency</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">MODE 3</span>
-        </div>
-        <div class="note mt1"><span class="c">配置 AI <span class="hi">自主跑完</span>未来任务（替你 / 替他人）</span><span class="e">Configure AI to run future tasks autonomously</span></div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>你的角色</strong> · 规则制定者</span><span class="e"><strong>Role</strong> · rule-setter</span></li>
-          <li><span class="c">聊天机器人 · 导师 · 游戏角色 · 自主 Agent</span><span class="e">Chatbots · tutors · game characters · agents</span></li>
-          <li><span class="c">编程对应：接进工作流自主交付</span><span class="e">Coding: autonomous delivery in workflows</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="note" data-anim style="margin-top:.5vh;text-align:center"><span class="c">上岗干活 → 并肩作战 → 授权自治 —— 正对应本篇主线：从「会聊」到「会干」</span><span class="e">Execute → co-create → delegate autonomy — the very arc of this deck: from chatting to doing</span></div>
-
-    <!-- ─── 四大核心能力 4 Ds ─── -->
-    <div class="meta" data-anim style="margin-top:1vh;margin-bottom:.5vh"><span class="c">四大核心能力 · The 4 Ds</span><span class="e">The 4 Ds · four core competencies</span></div>
-    <div class="grid-4" data-anim style="flex:1;min-height:0;gap:.7vh .7vw;align-items:stretch">
-      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.7vh .7vw">
-        <div style="display:flex;align-items:center;gap:.4vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--accent)"><use href="#i-fork"/></svg>
-          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Delegation · 委派</span><span class="e">Delegation</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D1</span>
-        </div>
-        <div class="note mt1"><span class="c"><span class="hi">会分活</span> —— 哪些事你做、哪些 AI 做、哪些一起做</span><span class="e"><span class="hi">Divide work</span> — what's yours, the AI's, or shared</span></div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>问题意识</strong> · 先厘清目标与任务性质</span><span class="e"><strong>Problem awareness</strong> · clarify goals first</span></li>
-          <li><span class="c"><strong>平台意识</strong> · 懂各 AI 系统的能力与边界</span><span class="e"><strong>Platform awareness</strong> · know each AI's limits</span></li>
-          <li><span class="c"><strong>任务委派</strong> · 发挥人 / AI 各自优势</span><span class="e"><strong>Task delegation</strong> · play to strengths</span></li>
-        </ul>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.7vh .7vw">
-        <div style="display:flex;align-items:center;gap:.4vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--orange)"><use href="#i-bubble"/></svg>
-          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Description · 描述</span><span class="e">Description</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D2</span>
-        </div>
-        <div class="note mt1"><span class="c"><span class="hi">会提需求</span> —— 用能让 AI 高效协作的方式沟通</span><span class="e"><span class="hi">Communicate</span> — set AI up for productive collaboration</span></div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>产品描述</strong> · 要什么：输出·格式·受众·风格</span><span class="e"><strong>Product</strong> · what: output, format, audience</span></li>
-          <li><span class="c"><strong>过程描述</strong> · 怎么干：分步指令·引导式</span><span class="e"><strong>Process</strong> · how: steps, guided instruction</span></li>
-          <li><span class="c"><strong>行为规范</strong> · 简洁/详尽 · 挑战/支持</span><span class="e"><strong>Performance</strong> · concise or thorough, challenge or support</span></li>
-        </ul>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.7vh .7vw">
-        <div style="display:flex;align-items:center;gap:.4vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--purple)"><use href="#i-brain"/></svg>
-          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Discernment · 甄别</span><span class="e">Discernment</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D3</span>
-        </div>
-        <div class="note mt1"><span class="c"><span class="hi">会挑错</span> —— 批判评估 AI 产出与行为</span><span class="e"><span class="hi">Judge critically</span> — assess AI outputs &amp; behavior</span></div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>产品甄别</strong> · 产出质量·相关性·偏差</span><span class="e"><strong>Product</strong> · quality, relevance, bias</span></li>
-          <li><span class="c"><strong>过程甄别</strong> · 人—AI 协作是否有效</span><span class="e"><strong>Process</strong> · is the collaboration working</span></li>
-          <li><span class="c"><strong>表现甄别</strong> · 自主行为体验如何</span><span class="e"><strong>Performance</strong> · how autonomous behavior feels</span></li>
-        </ul>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--green);padding:.7vh .7vw">
-        <div style="display:flex;align-items:center;gap:.4vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--green)"><use href="#i-shield"/></svg>
-          <div class="h-sm" style="font-size:clamp(13px,.9vw,17px)"><span class="c">Diligence · 尽责</span><span class="e">Diligence</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">D4</span>
-        </div>
-        <div class="note mt1"><span class="c"><span class="hi">守底线</span> —— 对 AI 辅助成果负全责</span><span class="e"><span class="hi">Own it</span> — take full responsibility for AI-assisted work</span></div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>创作尽责</strong> · 合规使用</span><span class="e"><strong>Creation</strong> · ethical, compliant use</span></li>
-          <li><span class="c"><strong>透明尽责</strong> · 披露 AI 参与</span><span class="e"><strong>Transparency</strong> · disclose AI involvement</span></li>
-          <li><span class="c"><strong>部署尽责</strong> · 事实核查·测试·担责</span><span class="e"><strong>Deployment</strong> · fact-check, test, be accountable</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="punch" data-anim style="margin-top:1vh;padding:.8vh 1.2vw;font-size:clamp(13px,1vw,18px)">
-      <span class="c">模型只是发动机，<span class="hi">人与 AI 协作的方式</span>才是方向盘 —— 会分活 · 会提需求 · 会挑错 · 守底线。</span>
-      <span class="e">The model is the engine; <span class="hi">how humans and AI work together</span> is the steering wheel — delegate well, describe clearly, discern critically, act diligently.</span>
-    </div>
-
-    <div class="note" data-anim style="margin-top:.7vh;opacity:.5">
-      <span class="c">内容来源 Source：AI Fluency Framework（Rick Dakan &amp; Joseph Feller and Anthropic · CC BY-NC-SA 4.0），网址：<a href="https://academy.claude.com/courses" style="color:inherit">https://academy.claude.com/courses</a></span>
-      <span class="e">Source: AI Fluency Framework (Rick Dakan &amp; Joseph Feller and Anthropic · CC BY-NC-SA 4.0) · <a href="https://academy.claude.com/courses" style="color:inherit">https://academy.claude.com/courses</a></span>
-    </div>
-  </div>
-  <div class="foot"><div><span class="c">参考 · AI 素养框架</span><span class="e">Reference · AI Fluency</span></div><div>— · —</div></div>
-</section>
-
-<!-- ══════════════════════ 12 · im-agent-cases · light ══════════════════════ -->
-<section class="slide light" id="slide-12" data-index="11" data-sid="im-agent-cases">
-  <div class="chrome"><div><span class="c">参考 · IM × Agent 案例研究</span><span class="e">Reference · IM × Agent Cases</span></div><div>REFERENCE · CASES</div></div>
-  <div class="frame">
-
-    <div class="kicker" data-anim><span class="c">四类 Agent 助手对照</span><span class="e">Four Agent Assistants Compared</span></div>
-    <h2 class="h-xl" data-anim style="margin-bottom:.8vh"><span class="c">IM × AGENT 案例研究</span><span class="e">IM × Agent Case Studies</span></h2>
-    <div class="grid-4" data-anim style="gap:.9vh 1vw;align-items:stretch">
-      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">A</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh">OpenClaw</div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">个人 AI 助手 · 龙虾</span><span class="e">Personal AI · Lobster</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c">Gateway hub-and-spoke 架构</span><span class="e">Hub-and-spoke Gateway</span></li><li><span class="c">桥接 WhatsApp/Telegram/Slack 等多渠道</span><span class="e">Bridges multi-channel IM</span></li><li><span class="c">消息统一分发 · 工具集成</span><span class="e">Unified routing + tools</span></li></ul></div>
-      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">B</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh"><span class="c">Hermes</span><span class="e">Hermes</span></div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">多通道 + 原生飞书</span><span class="e">Multi-channel + Feishu</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c"><strong>80+ Skills</strong>·跨会话持久记忆</span><span class="e"><strong>80+ Skills</strong>, memory</span></li><li><span class="c">飞书/微信/Telegram/Discord</span><span class="e">Multi-IM integration</span></li><li><span class="c">OpenClaw 适配版</span><span class="e">OpenClaw variant</span></li></ul></div>
-      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">C</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh">Claude Code</div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">CLI 原生 · 不绑 IM</span><span class="e">CLI-native · No IM</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c">REPL + Agent Loop + swarm 编排</span><span class="e">REPL + Loop + swarm</span></li><li><span class="c">MCP/SDK 嵌入 IDE</span><span class="e">Embeds via MCP/SDK</span></li><li><span class="c">Tools/MCP 生态心脏</span><span class="e">Heart of MCP ecosystem</span></li></ul></div>
-      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.8vh .7vw"><div class="meta" style="font-size:clamp(9px,.5vw,10px)">D</div><div class="h-sm" style="font-size:clamp(12px,.82vw,15px);margin-top:.3vh"><span class="c">Zcode · 智谱开源</span><span class="e">Zcode · GLM OSS</span></div><div class="note" style="font-size:clamp(9.5px,.55vw,11px);opacity:.6;margin-top:.2vh"><span class="c">中间路线</span><span class="e">Middle Path</span></div><ul class="ar-list" style="margin-top:.6vh"><li><span class="c">通用 Agent 框架（桌面）</span><span class="e">Universal framework</span></li><li><span class="c"><strong>Lark-cli</strong> 桥接飞书</span><span class="e">Bridges Feishu via <strong>Lark-cli</strong></span></li><li><span class="c">底层都是 Augmented LLM</span><span class="e">Built on Augmented LLM</span></li></ul></div>
-    </div>
-    <div class="kicker" data-anim style="margin-top:1.6vh;margin-bottom:.2vh"><span class="c">案例 · 生产级飞书 Agent 架构（Albert）</span><span class="e">Case · Production Feishu Agent (Albert)</span></div>
-    <div class="arch-flow" data-anim style="margin-top:0;gap:.3vh;flex:1;min-height:0;justify-content:center">
-      <div class="arch-row arch-entry" style="gap:1vw">
-        <div class="arch-box arch-im" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#128172;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)"><span class="c">飞书 IM</span><span class="e">Feishu IM</span></div><div class="arch-desc"><span class="c">Bot · 消息触达</span><span class="e">Bot · Trigger</span></div></div>
-        <div class="arch-plus">+</div>
-        <div class="arch-box arch-web" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#127760;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)">Web Portal</div><div class="arch-desc"><span class="c">SSO 登录</span><span class="e">SSO Login</span></div></div>
-      </div>
-      <div class="arch-arrow-down"><span class="c">↓ 消息事件</span><span class="e">↓ Message Event</span></div>
-      <div class="arch-row arch-core">
-        <div class="arch-box arch-node wide" style="padding:.7vh 1.2vw">
-          <div class="arch-badge"><span class="c">Augmented LLM + Tools</span><span class="e">Augmented LLM + Tools</span></div>
-          <div class="arch-title" style="font-size:clamp(12px,.85vw,17px)">node-service</div>
-          <div class="arch-desc"><span class="c">Claude Code SDK + Python</span><span class="e">Claude Code SDK + Python</span></div>
-          <div class="arch-tags"><span class="chip cn" style="font-size:8.5px"><span class="c">飞书 WS 长链接</span><span class="e">Feishu WS</span></span><span class="chip cn" style="font-size:8.5px">lark-cli</span><span class="chip cn" style="font-size:8.5px"><span class="c">customer-report</span><span class="e">Report</span></span></div>
-        </div>
-      </div>
-      <div class="arch-arrow-down"><span class="c">↓ X-Internal-Token</span><span class="e">↓ X-Internal-Token</span></div>
-      <div class="arch-row arch-be">
-        <div class="arch-box arch-backend wide" style="padding:.7vh 1.2vw">
-          <div class="arch-badge go"><span class="c">Go · Bin</span><span class="e">Go · Binary</span></div>
-          <div class="arch-title" style="font-size:clamp(12px,.85vw,17px)">Backend</div>
-          <div class="arch-desc"><span class="c">业务逻辑 + RBAC + Scheduler</span><span class="e">Business Logic + RBAC + Scheduler</span></div>
-          <div class="arch-tags"><span class="chip cn" style="font-size:8.5px">GORM</span><span class="chip cn" style="font-size:8.5px"><span class="c">3pc 扫表</span><span class="e">3pc Scan</span></span><span class="chip cn" style="font-size:8.5px">OAuth→JWT</span></div>
-        </div>
-      </div>
-      <div class="arch-arrow-down"><span class="c">↓ GORM</span><span class="e">↓ GORM</span></div>
-      <div class="arch-row arch-data" style="gap:1vw">
-        <div class="arch-box arch-db" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#128024;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)">PostgreSQL</div><div class="arch-desc"><span class="c">业务数据</span><span class="e">Business Data</span></div></div>
-        <div class="arch-plus">×</div>
-        <div class="arch-box arch-cache" style="padding:.6vh 1vw"><div class="arch-ico" style="font-size:clamp(14px,1vw,20px)">&#9889;</div><div class="arch-label" style="font-size:clamp(11px,.76vw,15px)">Redis</div><div class="arch-desc"><span class="c">缓存 / 会话</span><span class="e">Cache / Session</span></div></div>
-      </div>
-    </div>
-    <div class="punch" data-anim style="margin-top:.6vh;font-size:clamp(12px,.85vw,16px);padding:.7vh 1.2vw">
-      <span class="c">关键差异：<strong>IM 接入两极分化</strong>——OpenClaw/Hermes 内置 Gateway；Claude Code 纯 CLI/IDE；Zcode 走中间路线借 <span class="hi">Lark-cli</span>。</span>
-      <span class="e">Key divergence: built-in gateways vs CLI-only vs the middle path via <span class="hi">Lark-cli</span>.</span>
-    </div>
-  </div>
-  <div class="foot"><div><span class="c">参考 · IM × Agent 案例</span><span class="e">Reference · IM × Agent Cases</span></div><div>— · —</div></div>
-</section>
-
-<!-- ══════════════════════ 14 · rewired · light（参考 · 麦肯锡 Rewired × AI 转型）══════════════════════ -->
-<section class="slide light" id="slide-14" data-index="12" data-sid="rewired">
-  <div class="chrome"><div><span class="c">企业转型方法论 · 麦肯锡 Rewired</span><span class="e">Enterprise Playbook · McKinsey Rewired</span></div><div>REFERENCE · REWIRED</div></div>
-  <div class="frame">
-    <div class="kicker" data-anim><span class="c">读书参考 × AI 转型适配</span><span class="e">Book Reference, Adapted for the AI Era</span></div>
-    <h2 class="h-xl" data-anim style="margin-bottom:.4vh"><span class="c">数字化转型的六项能力，AI 转型也可参考</span><span class="e">Six Capabilities from Digital Transformation — a Reference for AI Transformation</span></h2>
-    <p class="h-sub" data-anim style="margin-top:.2vh;margin-bottom:.6vh;font-size:clamp(13px,1.05vw,20px)"><span class="c">《Rewired》：89% 的企业已启动数字化转型，却只兑现 31% 的预期收入提升——卡点从来不在技术，而在组织能力。这本手册的骨架，正是 AI 转型的一面镜子。</span><span class="e">Rewired (McKinsey, 2023): 89% of firms have launched transformations, yet captured only 31% of the expected revenue lift — the bottleneck is organizational, not technical. Its skeleton mirrors AI transformation.</span></p>
-
-    <!-- ─── 六项企业能力 ─── -->
-    <div class="meta" data-anim style="margin-bottom:.5vh"><span class="c">六项企业能力 ·《Rewired》六大篇章，项项都是 AI 转型的地基</span><span class="e">Six enterprise capabilities · Rewired's six sections, each a foundation for AI transformation</span></div>
-    <div class="grid-3" data-anim style="gap:.6vh 1vw;align-items:stretch">
-      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.6vh .7vw">
-        <div style="display:flex;align-items:center;gap:.45vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--accent)"><use href="#i-plan"/></svg>
-          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">转型路线图</span><span class="e">Roadmap</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">01</span>
-        </div>
-        <div class="note mt1"><span class="c">先对齐 North Star，再按业务域切块：10–15 个域先选 2–5 个</span><span class="e">Align on a North Star, then carve by domain: pick 2–5 of 10–15</span></div>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.6vh .7vw">
-        <div style="display:flex;align-items:center;gap:.45vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--orange)"><use href="#i-user"/></svg>
-          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">人才梯队</span><span class="e">Talent Bench</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">02</span>
-        </div>
-        <div class="note mt1"><span class="c">核心能力自建、非核心外包；技术人才单独定价晋升</span><span class="e">Build core in-house, outsource the rest; pay tech talent on its own scale</span></div>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--purple);padding:.6vh .7vw">
-        <div style="display:flex;align-items:center;gap:.45vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--purple)"><use href="#i-loop"/></svg>
-          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">运营模式</span><span class="e">Operating Model</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">03</span>
-        </div>
-        <div class="note mt1"><span class="c">从 doing agile 到 being agile；产品经理职业化</span><span class="e">From doing agile to being agile; professionalize product management</span></div>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--green);padding:.6vh .7vw">
-        <div style="display:flex;align-items:center;gap:.45vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--green)"><use href="#i-chip"/></svg>
-          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">技术架构</span><span class="e">Technology</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">04</span>
-        </div>
-        <div class="note mt1"><span class="c">解耦架构 + 云 + DevOps，撑起分布式创新的速度</span><span class="e">Decoupled architecture, cloud, DevOps — speed for distributed innovation</span></div>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.6vh .7vw">
-        <div style="display:flex;align-items:center;gap:.45vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--accent)"><use href="#i-db"/></svg>
-          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">数据无处不在</span><span class="e">Data Everywhere</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">05</span>
-        </div>
-        <div class="note mt1"><span class="c">数据产品化：像管产品一样管数据，可复用、有人负责</span><span class="e">Data products: manage data like products — reusable, owned, accountable</span></div>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.6vh .7vw">
-        <div style="display:flex;align-items:center;gap:.45vw">
-          <svg class="ico" style="width:1.1em;height:1.1em;color:var(--orange)"><use href="#i-door"/></svg>
-          <div class="h-sm" style="font-size:clamp(12.5px,.86vw,17px)"><span class="c">采纳与规模化</span><span class="e">Adoption &amp; Scaling</span></div>
-          <span class="meta" style="margin-left:auto;font-size:clamp(9px,.5vw,10px)">06</span>
-        </div>
-        <div class="note mt1"><span class="c">方案上线 ≠ 价值兑现；转型办公室用 stage-gate 追到底</span><span class="e">Launch ≠ value; a transformation office tracks impact to the P&amp;L</span></div>
-      </div>
-    </div>
-    <div class="note" data-anim style="margin-top:.3vh;text-align:center"><span class="c">第 <span class="hi">05 · 06</span> 两项——数据与采纳——正是 AI 转型「试点易、规模化难」的两大死因</span><span class="e">Capabilities <span class="hi">05 &amp; 06</span> — data and adoption — are exactly where AI transformations stall between pilot and scale</span></div>
-
-    <!-- ─── 复用 / 升级 ─── -->
-    <div class="meta" data-anim style="margin-top:.7vh;margin-bottom:.5vh"><span class="c">哪些直接复用 · 哪些要换新变量</span><span class="e">What transfers as-is · what needs upgrading</span></div>
-    <div class="grid-6-6" data-anim style="flex:1;min-height:0;gap:.6vh 1.4vw;align-items:stretch">
-      <div class="tile box pad compact-card" style="border-color:var(--accent);padding:.7vh .8vw">
-        <div style="display:flex;align-items:center;gap:.5vw">
-          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--accent)"><use href="#i-shield"/></svg>
-          <div class="h-sm"><span class="c">直接复用 · 组织的物理定律不变</span><span class="e">Transfer as-is · the physics holds</span></div>
-        </div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>按业务域切块</strong> · 够大才值得打、够小才打得赢，别全公司一起上</span><span class="e"><strong>Domain bites</strong> · big enough to matter, small enough to win</span></li>
-          <li><span class="c"><strong>Pod 小队制</strong> · 一个方案一个小队：业务 + 产品 + 工程 + 数据端到端负责</span><span class="e"><strong>Pod model</strong> · one squad per solution, end-to-end ownership</span></li>
-          <li><span class="c"><strong>数据产品化</strong> · 语料 / 知识库的地基，AI 转型只会更依赖它</span><span class="e"><strong>Data products</strong> · the foundation AI now leans on even harder</span></li>
-          <li><span class="c"><strong>采纳纪律</strong> · 上线只算 30%，价值要追进损益表</span><span class="e"><strong>Adoption discipline</strong> · launch is 30%; track value to the P&amp;L</span></li>
-        </ul>
-      </div>
-      <div class="tile box pad compact-card" style="border-color:var(--orange);padding:.7vh .8vw">
-        <div style="display:flex;align-items:center;gap:.5vw">
-          <svg class="ico" style="width:1.2em;height:1.2em;color:var(--orange)"><use href="#i-gear"/></svg>
-          <div class="h-sm"><span class="c">AI 时代升级 · 换上新变量</span><span class="e">Upgrade for AI · new variables</span></div>
-        </div>
-        <ul class="ar-list mt1">
-          <li><span class="c"><strong>技术栈长出新层</strong> · 模型网关 · 评测 Evals · Agent 编排 · LLMOps</span><span class="e"><strong>New stack layer</strong> · model gateway, evals, agent orchestration, LLMOps</span></li>
-          <li><span class="c"><strong>人才换新角色</strong> · AI 产品经理 / Agent 工程师 / 评测工程师 + 全员 AI 素养（见前页）</span><span class="e"><strong>New roles</strong> · AI PMs, agent engineers, eval engineers + AI fluency for all</span></li>
-          <li><span class="c"><strong>数据直通模型</strong> · RAG 语料、微调数据、知识库——数据质量就是模型上限</span><span class="e"><strong>Data feeds the model</strong> · corpus, fine-tuning sets, KB — data quality caps model quality</span></li>
-          <li><span class="c"><strong>风险清单变长</strong> · 幻觉 · 模型风险 · 隐私合规，须前置到设计阶段</span><span class="e"><strong>Longer risk list</strong> · hallucination, model risk, privacy — shift left</span></li>
-          <li><span class="c"><strong>节奏两极分化</strong> · 试点从月级压到周级，但「人改变工作方式」仍以月计</span><span class="e"><strong>Split tempo</strong> · pilots compress to weeks; human adoption still takes months</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="punch" data-anim style="margin-top:.8vh;padding:.7vh 1.2vw;font-size:clamp(13px,1vw,18px)">
-      <span class="c">企业缺的从来不是模型，而是<span class="hi">把模型变成业务价值的组织能力</span>——六项能力，一项都不能少。</span>
-      <span class="e">What enterprises lack is never the model — it's the <span class="hi">organizational machinery that turns models into value</span>. All six capabilities, no exemptions.</span>
-    </div>
-
-    <div class="note" data-anim style="margin-top:.6vh;opacity:.5">
-      <span class="c">内容来源 Source：Rewired: The McKinsey Guide to Outcompeting in the Age of Digital and AI（Eric Lamarre · Kate Smaje · Rodney Zemmel, McKinsey Press, 2023），89% / 31% 数据引自该书引言</span>
-      <span class="e">Source: Rewired (Lamarre, Smaje &amp; Zemmel, McKinsey Press, 2023), figures from its Introduction</span>
-    </div>
-  </div>
-  <div class="foot"><div><span class="c">参考 · 麦肯锡 Rewired</span><span class="e">Reference · Rewired</span></div><div>— · —</div></div>
-</section>
-
-<!-- ══════════════════════ 08 · thanks · hero dark ══════════════════════ -->
+<!-- ══════════════════════ thanks ══════════════════════ -->
 <section class="slide hero dark" id="slide-8" data-index="13" data-sid="thanks">
   <div class="frame" style="align-items:center;justify-content:center;text-align:center">
     <div class="kicker" data-anim>THANK YOU</div>
