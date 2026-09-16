@@ -1358,6 +1358,113 @@ body.wm-off #wm-layer{display:none}
 @media (max-width:768px){#slide-34 .kv-primer,#slide-35 .kv-primer{grid-template-columns:1fr;row-gap:.5vh}#slide-34 .kv-grid4,#slide-35 .kv-grid4{grid-template-columns:1fr}#slide-34 .kv-arrow,#slide-35 .kv-arrow{transform:rotate(90deg)}#slide-34 .kv-grid,#slide-35 .kv-grid{grid-template-columns:1fr}#slide-34 .kv-band,#slide-35 .kv-band{grid-template-columns:1fr 1fr}#slide-34 .kv-sess,#slide-35 .kv-sess{flex-direction:column;align-items:flex-start;gap:.5vh}
 }
 </style>
+<style id="v2-slide3738-cachevalue">
+/* ============ 37 · cache-value · scoped（仅本页生效） ============ */
+#slide-37 .frame{padding-top:1.8vh;padding-bottom:1.2vh}
+#slide-37 .cv-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.9vh .9vw;margin-top:.8vh;flex:1;min-height:0}
+#slide-37 .cv-card{border:1px solid var(--hair);border-radius:5px;background:var(--paper);padding:1vh .9vw;display:flex;flex-direction:column;gap:.45vh;min-width:0}
+#slide-37 .cv-card[data-c="cost"] .kn{flex:1}
+
+#slide-37 .cv-card .rule-list{flex:1;justify-content:space-evenly}
+#slide-37 .cv-card .anti-list{flex:1;justify-content:space-evenly}
+#slide-37 .cv-card[data-c="sla"] .kn{flex:none}
+#slide-37 .cv-card[data-c="anti"] .kn{flex:none}
+#slide-37 .cv-card .kt{font-family:var(--mono);font-size:clamp(9px,.6vw,11px);letter-spacing:.1em;font-weight:700;text-transform:uppercase;opacity:.85}
+#slide-37 .cv-card .kh{font-family:var(--serif-zh);font-weight:700;font-size:clamp(11.5px,.86vw,16px);line-height:1.3}
+#slide-37 .cv-card .kn{font-family:var(--sans-zh);font-size:clamp(10px,.68vw,12.5px);line-height:1.5;opacity:.75}
+#slide-37 .cv-card .kn b{font-weight:700;opacity:.95}
+#slide-37 .cv-card .kn code{font-family:var(--mono);font-size:clamp(9px,.62vw,11.5px);background:var(--paper-tint);border:1px solid var(--hair);border-radius:3px;padding:.1vh .35vw;white-space:nowrap}
+#slide-37 .cv-card[data-c="cost"]{border-left:3px solid #00d4aa;background:linear-gradient(135deg,rgba(0,212,170,.06),transparent 70%)}
+#slide-37 .cv-card[data-c="cost"] .kt{color:#00a88c}
+#slide-37 .cv-card[data-c="sla"]{border-left:3px solid #4f6fff;background:linear-gradient(135deg,rgba(79,111,255,.05),transparent 70%)}
+#slide-37 .cv-card[data-c="sla"] .kt{color:#4f6fff}
+#slide-37 .cv-card[data-c="anti"]{border-left:3px solid #b91c1c;background:linear-gradient(135deg,rgba(185,28,28,.045),transparent 70%)}
+#slide-37 .cv-card[data-c="anti"] .kt{color:#b91c1c}
+/* 折扣阶梯表 */
+#slide-37 .cv-table{width:100%;border-collapse:collapse;font-family:var(--sans-zh);margin-top:.4vh}
+#slide-37 .cv-table th{font-weight:700;font-size:clamp(9px,.62vw,11.5px);text-align:left;padding:.35vh .5vw;border-bottom:1.5px solid var(--hair);white-space:nowrap;opacity:.9}
+#slide-37 .cv-table td{font-size:clamp(9.5px,.64vw,12px);padding:.35vh .5vw;border-bottom:1px solid var(--hair);font-variant-numeric:tabular-nums}
+#slide-37 .cv-table tr:last-child td{border-bottom:none}
+#slide-37 .cv-table .hit{font-weight:700}
+#slide-37 .cv-table .hit-90{color:#00a88c}
+#slide-37 .cv-table .hit-95{color:#065f46;background:rgba(0,212,170,.10)}
+#slide-37 .cv-table .disc{font-weight:700;color:var(--accent)}
+#slide-37 .cv-table .disc-best{color:#065f46;background:rgba(0,212,170,.10)}
+/* 反面场景列表 */
+#slide-37 .anti-list{display:flex;flex-direction:column;gap:.38vh;margin-top:.2vh}
+#slide-37 .anti-list .ai-row{display:flex;gap:.5vw;align-items:baseline;font-family:var(--sans-zh);font-size:clamp(9.5px,.64vw,12px);line-height:1.42;opacity:.85}
+#slide-37 .anti-list .ai-n{font-family:var(--mono);font-weight:700;color:#b91c1c;font-size:clamp(9px,.6vw,11px);min-width:1.1em;flex:none}
+#slide-37 .anti-list b{font-weight:700;opacity:.95}
+
+#slide-37 .rule-list{display:flex;flex-direction:column;gap:.38vh;margin-top:.2vh}
+#slide-37 .rule-list .rl{display:flex;gap:.5vw;align-items:baseline;font-family:var(--sans-zh);font-size:clamp(9.5px,.64vw,12px);line-height:1.42;opacity:.85}
+#slide-37 .rule-list .rl b{font-weight:700;opacity:.95}
+#slide-37 .rule-list .rl .tick{font-family:var(--mono);color:#4f6fff;font-weight:700;min-width:1.1em;flex:none;font-size:clamp(9px,.6vw,11px)}
+/* 潮汐时间条 */
+/* 适合/不适合 chips */
+#slide-37 .punch{border-left-color:var(--green);background:linear-gradient(90deg,rgba(0,212,170,.08),rgba(0,212,170,.02))}
+#slide-37 .punch::after{background:linear-gradient(90deg,var(--green),transparent)}
+@media (min-width:769px) and (max-height:949px){
+  #slide-37 .frame{padding-top:1.4vh;padding-bottom:1vh}
+  #slide-37 .cv-grid{margin-top:.6vh;gap:.6vh .6vw}
+  #slide-37 .cv-card{padding:.6vh .7vw;gap:.3vh}
+  #slide-37 .cv-card .kn{font-size:clamp(9.5px,.66vw,11.5px);line-height:1.42}
+  #slide-37 .cv-table td,#slide-37 .cv-table th{padding:.25vh .4vw}
+  #slide-37 .anti-list .ai-row,#slide-37 .rule-list .rl{font-size:clamp(9px,.6vw,11px);line-height:1.38}
+  #slide-37 .punch{margin-top:.8vh !important;padding:1.2vh 1.2vw;font-size:clamp(11.5px,.85vw,15.5px) !important}
+}
+@media (max-width:768px){
+  #slide-37 .cv-grid{grid-template-columns:1fr}
+}
+</style>
+<style id="v2-slide36-cacheguide">
+/* ============ 36 · glmc-cache-guide · scoped（仅本页生效） ============ */
+#slide-36 .frame{padding-top:1.8vh;padding-bottom:1.2vh}
+#slide-36 .cg-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.9vh .9vw;margin-top:.8vh;flex:1;min-height:0}
+#slide-36 .cg-card{border:1px solid var(--hair);border-radius:5px;background:var(--paper);padding:1vh .9vw;display:flex;flex-direction:column;gap:.45vh;min-width:0}
+#slide-36 .cg-card{justify-content:space-evenly}
+#slide-36 .cg-card .kn{flex:none}
+#slide-36 .cg-card .kt{font-family:var(--mono);font-size:clamp(9px,.6vw,11px);letter-spacing:.1em;font-weight:700;text-transform:uppercase;opacity:.85}
+#slide-36 .cg-card .kh{font-family:var(--serif-zh);font-weight:700;font-size:clamp(11.5px,.86vw,16px);line-height:1.3}
+#slide-36 .cg-card .kn{font-family:var(--sans-zh);font-size:clamp(10px,.68vw,12.5px);line-height:1.5;opacity:.75}
+#slide-36 .cg-card .kn b{font-weight:700;opacity:.95}
+#slide-36 .cg-card .kn code,#slide-36 .cg-matrix code,#slide-36 .cg-bar code{font-family:var(--mono);font-size:clamp(9px,.62vw,11.5px);background:var(--paper-tint);border:1px solid var(--hair);border-radius:3px;padding:.1vh .35vw;white-space:nowrap}
+#slide-36 .cg-card[data-c="implicit"]{border-left:3px solid #4f6fff;background:linear-gradient(135deg,rgba(79,111,255,.05),transparent 70%)}
+#slide-36 .cg-card[data-c="implicit"] .kt{color:#4f6fff}
+#slide-36 .cg-card[data-c="explicit"]{border-left:3px solid #00d4aa;background:linear-gradient(135deg,rgba(0,212,170,.06),transparent 70%)}
+#slide-36 .cg-card[data-c="explicit"] .kt{color:#00a88c}
+#slide-36 .cg-card[data-c="verify"]{border-left:3px solid #f59e0b;background:linear-gradient(135deg,rgba(245,158,11,.055),transparent 70%)}
+#slide-36 .cg-card[data-c="verify"] .kt{color:#d97706}
+#slide-36 .cg-matrix{border:1px solid var(--hair);border-radius:5px;background:var(--paper);padding:.8vh 1vw;margin-top:.9vh}
+#slide-36 .cg-matrix .cm-t{font-family:var(--serif-zh);font-weight:700;font-size:clamp(11px,.84vw,15px);margin-bottom:.5vh}
+#slide-36 .cg-matrix table{width:100%;border-collapse:collapse;font-family:var(--sans-zh)}
+#slide-36 .cg-matrix th{font-family:var(--sans-zh);font-weight:700;font-size:clamp(9.5px,.64vw,12px);text-align:left;padding:.4vh .5vw;border-bottom:1.5px solid var(--hair);white-space:nowrap}
+#slide-36 .cg-matrix td{font-size:clamp(9.5px,.64vw,12px);line-height:1.45;padding:.4vh .5vw;border-bottom:1px solid var(--hair);opacity:.9}
+#slide-36 .cg-matrix tr:last-child td{border-bottom:none}
+#slide-36 .cg-matrix .ok{color:#00a88c;font-weight:700}
+#slide-36 .cg-matrix .no{color:#b91c1c;font-weight:700}
+#slide-36 .cg-matrix .mono{font-family:var(--mono);font-size:clamp(9px,.6vw,11px)}
+#slide-36 .cg-bar{border:1px solid var(--hair);border-radius:5px;background:var(--paper);padding:.7vh 1vw;display:flex;align-items:center;gap:1vw;margin-top:.9vh;min-width:0}
+#slide-36 .cg-bar .kb-t{font-family:var(--serif-zh);font-weight:700;font-size:clamp(11px,.84vw,15px);white-space:nowrap}
+#slide-36 .cg-bar .kb-n{font-family:var(--sans-zh);font-size:clamp(10.5px,.7vw,13px);line-height:1.5;opacity:.75}
+#slide-36 .cg-bar .kb-f{margin-left:auto;font-family:var(--mono);font-size:clamp(9.5px,.62vw,11.5px);color:var(--accent);font-weight:700;white-space:nowrap}
+#slide-36 .punch{border-left-color:var(--purple);background:linear-gradient(90deg,rgba(139,92,246,.08),rgba(139,92,246,.02))}
+#slide-36 .punch::after{background:linear-gradient(90deg,var(--purple),transparent)}
+@media (min-width:769px) and (max-height:949px){
+  #slide-36 .frame{padding-top:1.4vh;padding-bottom:1vh}
+  #slide-36 .cg-grid{margin-top:.6vh;gap:.6vh .6vw}
+  #slide-36 .cg-card{padding:.6vh .7vw;gap:.3vh}
+  #slide-36 .cg-card .kn{font-size:clamp(9.5px,.66vw,11.5px);line-height:1.42}
+  #slide-36 .cg-matrix{padding:.6vh .8vw;margin-top:.7vh}
+  #slide-36 .cg-matrix td,#slide-36 .cg-matrix th{padding:.3vh .4vw}
+  #slide-36 .cg-bar{padding:.5vh .8vw;margin-top:.7vh}
+  #slide-36 .punch{margin-top:.8vh !important;padding:1.2vh 1.2vw;font-size:clamp(11.5px,.85vw,15.5px) !important}
+}
+@media (max-width:768px){
+  #slide-36 .cg-grid{grid-template-columns:1fr}
+  #slide-36 .cg-bar{flex-direction:column;align-items:flex-start;gap:.5vh}
+}
+</style>
 </head>
 <body data-lang="cn" data-page-node-id="7CrDhp4Oz8SDxj0ekawIYe">
 
@@ -3121,6 +3228,127 @@ body.wm-off #wm-layer{display:none}
 
 
 
+<!-- ══════════════════════ slide-36（附录 · GLM 上下文缓存命中率实操指南）══════════════════════ -->
+<section class="slide light" id="slide-36" data-sid="glmc-cache-guide">
+  <div class="chrome">
+    <div><span class="c">附件 · GLM 上下文缓存命中率实操指南</span><span class="e">Appendix · GLM Context-Cache Hit-Rate Playbook</span></div>
+    <div>APPENDIX · 22a / 33</div>
+  </div>
+  <div class="frame">
+    <div class="kicker" data-anim><span class="c">附录 · 实操</span><span class="e">Appendix · Playbook</span></div>
+    <h2 class="h-xl" data-anim><span class="c">让缓存真正命中：GLM 显式缓存实操指南</span><span class="e">Making Cache Actually Hit: GLM Explicit-Cache Playbook</span></h2>
+    <p class="h-sub" data-anim style="margin-top:0;font-size:clamp(11px,.8vw,15px)"><span class="c">上一页 Lever 03/04 的协议抓手落地页——隐式缓存免费但看运气，显式缓存两个参数把「同会话请求」钉到同一条缓存链路，命中率、TTFT、成本三改善。</span><span class="e">The protocol-level landing for Levers 03/04 — implicit cache is free but luck-dependent; two explicit parameters pin same-session requests onto one cache chain, improving hit rate, TTFT and cost together.</span></p>
+    <div class="cg-grid">
+      <div class="cg-card" data-anim data-c="implicit">
+        <div class="kt">Step 1 · Implicit</div>
+        <div class="kh"><span class="c">隐式缓存：默认开、免配置</span><span class="e">Implicit: on by default</span></div>
+        <div class="kn"><span class="c">GLM-5.3 / 5.2 / 5 系内置上下文缓存，服务端自动识别相同或高度相似输入并复用，命中部分按<b>优惠价</b>计费。但它只管「内容像不像」，不管「请求送到哪台机器」——多轮对话被负载均衡打散到无缓存节点，<code>cached_tokens</code> 就会莫名偏低。</span><span class="e">GLM-5.3/5.2/5 ship implicit caching: the server auto-detects similar inputs and reuses them at a discount. But it only sees content similarity, not routing — when load balancing scatters a session across cold nodes, <code>cached_tokens</code> mysteriously drops.</span></div>
+      </div>
+      <div class="cg-card" data-anim data-c="explicit">
+        <div class="kt">Step 2 · Explicit</div>
+        <div class="kh"><span class="c">显式缓存：会话亲和，二选一</span><span class="e">Explicit: session affinity, either one</span></div>
+        <div class="kn"><span class="c">给请求打上会话标签，同标签请求尽量调度到同一条缓存链路：HTTP Header 传 <code>X-Session-Id</code>，或 body 传 <code>prompt_cache_key</code>——<b>二选一即可，同时传时 X-Session-Id 优先</b>。多轮对话、Agent 连续工具调用、同文档多次提问、固定 System Prompt 批处理是四大典型场景。Claude Code 等工具默认已带同类字段。</span><span class="e">Tag requests with a session label and they get pinned to one cache chain: <code>X-Session-Id</code> via HTTP header, or <code>prompt_cache_key</code> in the body — <b>pick one; if both are sent, X-Session-Id wins</b>. Multi-turn chat, agent tool loops, repeated doc Q&amp;A and fixed-system-prompt batch jobs are the four sweet spots. Claude Code already sends an equivalent field by default.</span></div>
+      </div>
+      <div class="cg-card" data-anim data-c="verify">
+        <div class="kt">Step 3 · Verify</div>
+        <div class="kh"><span class="c">验证：一个字段算命中率</span><span class="e">Verify: one field, one ratio</span></div>
+        <div class="kn"><span class="c">命中率 = <code>cached_tokens / prompt_tokens</code>（响应 <code>usage.prompt_tokens_details</code>）。验证法：取 2000+ Token 固定 System Prompt，冷启动一次后携相同 ID 再请求，看 <code>cached_tokens</code> 是否逼近共同前缀长度；再跑一组不带 ID 的对照组，两组之差就是真实收益。</span><span class="e">Hit rate = <code>cached_tokens / prompt_tokens</code> from <code>usage.prompt_tokens_details</code>. To verify: take a 2000+ token fixed system prompt, warm it once, re-request with the same ID and watch <code>cached_tokens</code> approach the shared prefix; a no-ID control group shows the true gain.</span></div>
+      </div>
+    </div>
+    <div class="cg-matrix" data-anim>
+      <div class="cm-t"><span class="c">三种协议的支持矩阵</span><span class="e">Protocol support matrix</span></div>
+      <table>
+        <tr><th><span class="c">协议</span><span class="e">Protocol</span></th><th><span class="c">端点</span><span class="e">Endpoint</span></th><th>X-Session-Id</th><th>prompt_cache_key</th></tr>
+        <tr><td>OpenAI Chat</td><td class="mono">/api/paas/v4/chat/completions</td><td><span class="ok">✓ Header</span></td><td><span class="ok">✓ Body</span></td></tr>
+        <tr><td>OpenAI Responses</td><td class="mono">/api/v1/responses</td><td><span class="ok">✓ Header</span></td><td><span class="ok">✓ Body</span></td></tr>
+        <tr><td>Anthropic</td><td class="mono">/api/anthropic/v1/messages</td><td><span class="ok">✓ Header</span></td><td><span class="no">✗</span><span class="c">不支持</span><span class="e">not supported</span></td></tr>
+      </table>
+    </div>
+    <div class="cg-bar" data-anim>
+      <div class="kb-t"><span class="c">Key 怎么取</span><span class="e">Key rules</span></div>
+      <div class="kb-n"><span class="c">同一会话全程复用、新会话换新值、不同用户绝不共用、全业务固定一个值 = 反模式；用 UUID/ULID 等不透明值，勿放姓名、手机号、API Key。批量任务特殊规则：同一份 System Prompt 或长文档共用一个 ID。</span><span class="e">Reuse within a session, regenerate per new session, never share across users, one global value = anti-pattern; use UUID/ULID, never PII or API keys. Batch jobs: one ID per fixed system prompt or long document.</span></div>
+      <div class="kb-f">UUID / ULID · no PII</div>
+    </div>
+    <div class="cg-bar" data-anim>
+      <div class="kb-t"><span class="c">命中前提</span><span class="e">Hit preconditions</span></div>
+      <div class="kb-n"><span class="c">缓存是前缀缓存：System Prompt、工具定义、固定知识、示例放前面，用户问题、时间戳、请求 ID 放后面；对话历史只追加、不改写。ID 只管路由，前缀一致才是命中的根。</span><span class="e">Caching is prefix-based: system prompt, tool definitions, fixed knowledge and examples up front; user questions, timestamps, request IDs at the tail; append-only history. The ID routes; a stable prefix is what actually hits.</span></div>
+      <div class="kb-f">stable prefix &rarr; cache hit</div>
+    </div>
+    <div class="punch" data-anim style="font-size:clamp(12.5px,.95vw,18px)"><span class="c">隐式缓存看内容、显式缓存管路由——把 Key 传对、把前缀排稳，多轮对话的缓存命中率是可以「配置」出来的。</span><span class="e">Implicit caching reads content, explicit caching owns routing — with the right key and a stable prefix, multi-turn cache hit rate becomes something you can configure.</span></div>
+  </div>
+  <div class="foot">
+    <div><span class="c">附录 · GLM 缓存实操</span><span class="e">APPENDIX</span></div>
+    <div><span class="c">附录 · 第 22a 页 / 共 33 页</span><span class="e">Appendix · 22a / 33</span></div>
+  </div>
+</section>
+
+
+
+
+<!-- ══════════════════════ slide-37（附录 · Cache 率的商业价值）══════════════════════ -->
+<section class="slide light" id="slide-37" data-sid="cache-value">
+  <div class="chrome">
+    <div><span class="c">附件 · Cache 率的商业价值</span><span class="e">Appendix · The Business Value of Cache Rate</span></div>
+    <div>APPENDIX · 22b / 33</div>
+  </div>
+  <div class="frame">
+    <div class="kicker" data-anim><span class="c">附录 · 商业账</span><span class="e">Appendix · The Money View</span></div>
+    <h2 class="h-xl" data-anim><span class="c">Cache 率就是折扣率：省钱、稳集群、换资源</span><span class="e">Cache Rate Is the Discount Rate: Save, Stabilize, Trade</span></h2>
+    <p class="h-sub" data-anim style="margin-top:0;font-size:clamp(11px,.8vw,15px)"><span class="c">官方 9.15 Cache 培训口径——命中部分按输入价 25% 计费；对平台它是集群健康度指标，对客户它是真金白银的折扣，85% 已成为 TPM 资源申请的新基准线。</span><span class="e">Official Sep-15 training numbers — cached tokens bill at 25% of input price; for the platform it is a cluster-health metric, for customers a real discount, and 85% is now the TPM baseline.</span></p>
+    <div class="cv-grid">
+      <div class="cv-card" data-anim data-c="cost">
+        <div class="kt">Money<span class="c"> · 折扣阶梯</span><span class="e"> &middot; Discount ladder</span></div>
+        <div class="kh"><span class="c">命中率越高，折扣越深</span><span class="e">Higher hit rate, deeper discount</span></div>
+        <table class="cv-table">
+          <tr><th><span class="c">命中率</span><span class="e">Hit</span></th><th><span class="c">输入</span><span class="e">Input</span></th><th><span class="c">总成本</span><span class="e">Total</span></th><th><span class="c">等同折扣</span><span class="e">As-if</span></th></tr>
+          <tr><td class="hit">0%</td><td>¥0.80</td><td>¥0.828</td><td><span class="c">原价（10 折）</span><span class="e">list (10/10)</span></td></tr>
+          <tr><td class="hit">50%</td><td>¥0.50</td><td>¥0.528</td><td>6.4<span class="c"> 折</span><span class="e">/10</span></td></tr>
+          <tr><td class="hit hit-90">90%</td><td>¥0.26</td><td>¥0.288</td><td>3.5<span class="c"> 折</span><span class="e">/10</span></td></tr>
+          <tr><td class="hit hit-95">95%<span class="c">（生产水位）</span><span class="e">(prod)</span></td><td>¥0.23</td><td>¥0.258</td><td class="disc disc-best">3.1<span class="c"> 折</span><span class="e">/10</span></td></tr>
+        </table>
+        <div class="kn" style="margin-top:.3vh"><span class="c">输出价不变（¥0.028）；<b>90% 命中 ≈ 输入价打到 3 折区间</b>——长上下文客户的成本杠杆第一来源。</span><span class="e">Output price unchanged (&yen;0.028); a 90% hit rate lands input cost in the ~30% range — the No.1 cost lever for long-context customers.</span></div>
+      </div>
+      <div class="cv-card" data-anim data-c="sla">
+        <div class="kt">Platform<span class="c"> · 集群稳定性</span><span class="e"> &middot; Cluster stability</span></div>
+        <div class="kh"><span class="c">高命中率 = 不扩容释放算力</span><span class="e">High hits = free capacity</span></div>
+        <div class="kn"><span class="c">Prefill 是计算最密集阶段；同前缀只算一次，全集群等效「白得」一批 GPU。五重收益：</span><span class="e">Prefill is the most compute-dense stage; computing each prefix once frees GPU fleet-wide. Five compounding wins:</span></div>
+        <div class="rule-list">
+          <div class="rl"><span class="tick">①</span><span><span class="c"><b>容量：</b>高峰排队与限流（429）概率下降，大并发客户可用性更稳</span><span class="e"><b>Capacity:</b> fewer peak-hour queues and 429s; steadier availability for high-concurrency tenants</span></span></div>
+          <div class="rl"><span class="tick">②</span><span><span class="c"><b>延迟：</b>TTFT 分布收敛、P99 收窄，SLO 达标率提升</span><span class="e"><b>Latency:</b> TTFT distribution tightens, P99 narrows, SLO attainment rises</span></span></div>
+          <div class="rl"><span class="tick">③</span><span><span class="c"><b>占用：</b>请求快进快出，打破「占用久→排队→超时重试→压力放大」循环</span><span class="e"><b>Occupancy:</b> requests finish and release fast, breaking the queue-timeout-retry spiral</span></span></div>
+          <div class="rl"><span class="tick">④</span><span><span class="c"><b>批处理：</b>长 prefill 不再阻塞同批 decode，单卡吞吐更高</span><span class="e"><b>Batching:</b> long prefills stop blocking peer decodes; higher per-GPU throughput</span></span></div>
+          <div class="rl"><span class="tick">⑤</span><span><span class="c"><b>韧性：</b>同样余量吸收更大流量尖峰，降低级联过载风险</span><span class="e"><b>Resilience:</b> the same headroom absorbs bigger spikes with less cascade risk</span></span></div>
+        </div>
+      </div>
+      <div class="cv-card" data-anim data-c="anti">
+        <div class="kt">Anti-patterns<span class="c"> · 反面场景</span><span class="e"> &middot; What kills cache</span></div>
+        <div class="kh"><span class="c">六种把 Cache 打穿的做法</span><span class="e">Six ways to kill your cache</span></div>
+        <div class="anti-list">
+          <div class="ai-row"><span class="ai-n">1</span><span><span class="c"><b>易变信息前置：</b>时间戳/请求 ID/随机数拼在最前，第一 token 即分歧，整条从零算</span><span class="e"><b>Volatile-first:</b> timestamps/IDs/randoms up front diverge at token one</span></span></div>
+          <div class="ai-row"><span class="ai-n">2</span><span><span class="c"><b>system 内嵌动态字段：</b>日期/用户名/实验参数写进 system，其后最长指令全部失效</span><span class="e"><b>Dynamic system fields:</b> dates/user flags inside system kill the longest prefix</span></span></div>
+          <div class="ai-row"><span class="ai-n">3</span><span><span class="c"><b>RAG 片段前置：</b>检索内容每轮不同还放前面，稳定指令永远进不了可复用前缀</span><span class="e"><b>RAG-first:</b> per-turn retrievals up front keep stable instructions out of the prefix</span></span></div>
+          <div class="ai-row"><span class="ai-n">4</span><span><span class="c"><b>强个性化多租户：</b>每用户独立 system prompt，前缀互不相同无法复用</span><span class="e"><b>Per-user systems:</b> tenant-specific prompts share nothing</span></span></div>
+          <div class="ai-row"><span class="ai-n">5</span><span><span class="c"><b>历史重写：</b>每轮摘要压缩/滑窗截断/消息重排，前缀自第一处变化起作废</span><span class="e"><b>History rewrites:</b> summarize/trim/reorder each turn invalidates from first change</span></span></div>
+          <div class="ai-row"><span class="ai-n">6</span><span><span class="c"><b>离线批处理：</b>每条输入主体不同，仅头部公共指令可命中，还易形成 prefill 高峰</span><span class="e"><b>Offline batch:</b> distinct bodies per request; only the header hits, spikes prefill</span></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="punch" data-anim style="font-size:clamp(12.5px,.95vw,18px)"><span class="c">对客户讲折扣（95% 命中 = 3.1 折），对平台讲容量（不扩容释放算力）——Cache 率是买卖双方利益对齐的那个交点。</span><span class="e">Pitch it as discount to customers (95% hits = 69% off) and as capacity to the platform — cache rate is where both sides&rsquo; interests align.</span></div>
+  </div>
+  <div class="foot">
+    <div><span class="c">附录 · Cache 商业价值</span><span class="e">APPENDIX</span></div>
+    <div><span class="c">附录 · 第 22b 页 / 共 33 页</span><span class="e">Appendix · 22b / 33</span></div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 <!-- ══════════════════════ slide-26（附录 · 数据准备体系与 Agentic 数据）══════════════════════ -->
 <section class="slide light" id="slide-26" data-sid="data-pipeline">
   <div class="chrome">
@@ -3872,5 +4100,133 @@ body.wm-off #wm-layer{display:none}
   window.addEventListener('pageshow',apply);
 })();
 </script>
+<script>
+/* === 访问门：SHA-256 口令校验（GLM2026）=== */
+(function(){
+  'use strict';
+  var HASH='69002fa1a658023b05954b1b8eceb519855d19a06326444c78595eea38de7ede';
+  var KEY='glm-insight-gate-v1';
+
+  function sha256hex(buf){
+    function rotr(n,x){return (x>>>n)|(x<<(32-n));}
+    var K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+           0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+           0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+           0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+           0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+           0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+           0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+           0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+    var H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+    var l=buf.length, bitLen=l*8;
+    var withOne=l+1, total=((withOne+8+63)>>6)<<6;
+    var m=new Uint8Array(total); m.set(buf); m[l]=0x80;
+    var dv=new DataView(m.buffer); dv.setUint32(total-4, bitLen>>>0); dv.setUint32(total-8, Math.floor(bitLen/4294967296));
+    var w=new Uint32Array(64);
+    for(var i=0;i<total;i+=64){
+      for(var t=0;t<16;t++) w[t]=dv.getUint32(i+t*4);
+      for(var t2=16;t2<64;t2++){
+        var s0=rotr(7,w[t2-15])^rotr(18,w[t2-15])^(w[t2-15]>>>3);
+        var s1=rotr(17,w[t2-2])^rotr(19,w[t2-2])^(w[t2-2]>>>10);
+        w[t2]=(w[t2-16]+s0+w[t2-7]+s1)>>>0;
+      }
+      var a=H[0],b=H[1],c=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
+      for(var t3=0;t3<64;t3++){
+        var S1=rotr(6,e)^rotr(11,e)^rotr(25,e);
+        var ch=(e&f)^(~e&g);
+        var temp1=(h+S1+ch+K[t3]+w[t3])>>>0;
+        var S0=rotr(2,a)^rotr(13,a)^rotr(22,a);
+        var maj=(a&b)^(a&c)^(b&c);
+        var temp2=(S0+maj)>>>0;
+        h=g;g=f;f=e;e=(d+temp1)>>>0;d=c;c=b;b=a;a=(temp1+temp2)>>>0;
+      }
+      H[0]=(H[0]+a)>>>0;H[1]=(H[1]+b)>>>0;H[2]=(H[2]+c)>>>0;H[3]=(H[3]+d)>>>0;
+      H[4]=(H[4]+e)>>>0;H[5]=(H[5]+f)>>>0;H[6]=(H[6]+g)>>>0;H[7]=(H[7]+h)>>>0;
+    }
+    return H.map(function(x){return ('00000000'+x.toString(16)).slice(-8);}).join('');
+  }
+
+  function utf8(str){
+    if(window.TextEncoder) return new TextEncoder().encode(str);
+    var out=[],esc=encodeURIComponent(str);
+    for(var i=0;i<esc.length;i++){
+      if(esc[i]==='%'){out.push(parseInt(esc.substr(i+1,2),16));i+=2;}
+      else out.push(esc.charCodeAt(i));
+    }
+    return new Uint8Array(out);
+  }
+
+  function unlock(){
+    document.documentElement.removeAttribute('data-gate');
+    var g=document.getElementById('gate'); if(g) g.remove();
+    try{localStorage.setItem(KEY,'1');}catch(e){}
+  }
+
+  function check(pw){
+    if(sha256hex(utf8(pw||''))===HASH){unlock();return true;}
+    return false;
+  }
+
+  // 前置隐藏：CSS 由 data-gate 控制
+  document.documentElement.setAttribute('data-gate','1');
+
+  var passed=false;
+  try{ passed = localStorage.getItem(KEY)==='1'; }catch(e){}
+  if(passed || check(new URLSearchParams(location.search).get('pw')||'')){ unlock(); return; }
+
+  // 构建 DOM
+  function build(){
+    var d=document.createElement('div'); d.id='gate';
+    d.innerHTML='<div class="gt-box"><div class="gt-logo">GLM</div>'
+      +'<div class="gt-t"><span class="gtc">AI 洞察 · 客户交流版</span><span class="gte">AI Insights · Client Briefing</span></div>'
+      +'<p class="gt-n"><span class="gtc">本材料仅限受邀客户，请输入访问口令。</span><span class="gte">Invitation only. Enter the access code to continue.</span></p>'
+      +'<div class="gt-row"><input id="gt-pw" type="password" autocomplete="off" placeholder="Access code" />'
+      +'<button id="gt-go" type="button">→</button></div>'
+      +'<div id="gt-err" class="gt-err"></div></div>';
+    document.body.appendChild(d);
+    var inp=document.getElementById('gt-pw'), err=document.getElementById('gt-err');
+    function submit(){
+      if(!check(inp.value)){ err.textContent='口令不正确 / Incorrect code'; err.classList.add('on'); inp.classList.add('shake');
+        setTimeout(function(){inp.classList.remove('shake');},450); inp.focus(); inp.select(); return; }
+      err.textContent='';
+    }
+    document.getElementById('gt-go').addEventListener('click',submit);
+    inp.addEventListener('keydown',function(e){ if(e.key==='Enter') submit(); });
+    setTimeout(function(){inp.focus();},60);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',build);
+  else build();
+})();
+</script>
+<style id="gate-style">
+html[data-gate="1"] #deck,html[data-gate="1"] #nav,html[data-gate="1"] #overview,html[data-gate="1"] #wm-layer,html[data-gate="1"] .lang-sw{display:none !important}
+html[data-gate="1"] body>*:not(#gate):not(script):not(style){visibility:hidden}
+#gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(1200px 800px at 30% 20%,rgba(79,111,255,.10),transparent 60%),#f4f6fb;
+  font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif}
+.gt-box{width:min(420px,86vw);background:#fff;border:1px solid rgba(20,40,90,.10);border-radius:14px;
+  box-shadow:0 24px 70px rgba(20,40,90,.16);padding:34px 34px 26px;text-align:center}
+.gt-logo{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:13px;
+  background:linear-gradient(135deg,#4f6fff,#8b5cf6);color:#fff;font-weight:800;font-size:17px;letter-spacing:.04em;margin-bottom:14px}
+.gt-t{font-weight:700;font-size:17px;color:#17244a}
+.gt-t .gte{display:none}
+.gt-n{margin:10px 0 18px;font-size:12.5px;line-height:1.6;color:#5b6b8c}
+.gt-row{display:flex;gap:8px}
+#gt-pw{flex:1;height:42px;border:1px solid rgba(20,40,90,.18);border-radius:9px;padding:0 14px;font-size:14px;outline:none;
+  transition:border .15s, box-shadow .15s;background:#fbfcff;color:#17244a}
+#gt-pw:focus{border-color:#4f6fff;box-shadow:0 0 0 3px rgba(79,111,255,.14)}
+#gt-go{width:46px;height:42px;border:none;border-radius:9px;background:#4f6fff;color:#fff;font-size:17px;cursor:pointer}
+#gt-go:hover{background:#3d5cf5}
+.gt-err{min-height:18px;margin-top:10px;font-size:12px;color:#c0392b;opacity:0;transition:opacity .15s}
+.gt-err.on{opacity:1}
+#gt-pw.shake{animation:gt-shake .4s}
+@keyframes gt-shake{20%{transform:translateX(-6px)}40%{transform:translateX(5px)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+@media (prefers-color-scheme: dark){
+  #gate{background:radial-gradient(1200px 800px at 30% 20%,rgba(90,120,255,.12),transparent 60%),#101526}
+  .gt-box{background:#181f35;border-color:rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.5)}
+  .gt-t{color:#e8ecf7}.gt-n{color:#9aa7c4}
+  #gt-pw{background:#111830;border-color:rgba(255,255,255,.14);color:#e8ecf7}
+}
+</style>
 </body>
 </html>
